@@ -10,10 +10,9 @@ The code is provided "as is", without warranty of any kind, express or implied, 
 
 For permissions or licensing inquiries, please contact: jacobg431@gmail.com
 
-
 ### Third-Party Software
 
 This project uses open-source software under their respective licenses, including but not limited to:
 
-- [React](https://reactjs.org/)  – MIT License
+- [React](https://reactjs.org/) – MIT License
 - [Vite](https://vitejs.dev/) – MIT License

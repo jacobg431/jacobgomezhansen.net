@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+    --bg-light: #f2f2f2;
+    --bg-mid: #cccccc;
+    --bg-dark: #333333;
+    --text-dark: #222222;
+    --text-light: #ffffff;
+    --font-sans: 'Segoe UI', Tahoma, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace;
+    --gap: 1.5rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
