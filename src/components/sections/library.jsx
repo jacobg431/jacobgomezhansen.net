@@ -1,31 +1,17 @@
+import LibraryItem from "../items/libraryItem"
+
 function Library() {
 
     return (
         <>
-            <section id="library">
-                <h2>Library</h2>
-                <div class="library-list">
-                    <div class="book-item">
-                        <div class="cover"></div>
-                        <div>
-                        <h3>Clean Code</h3>
-                        <p>Robert C. Martin's guide to writing readable, maintainable code.</p>
-                        </div>
-                    </div>
-                    <div class="book-item">
-                        <div class="cover"></div>
-                        <div>
-                        <h3>The Pragmatic Programmer</h3>
-                        <p>Essential tips and philosophies for pragmatic software development.</p>
-                        </div>
-                    </div>
-                    <div class="book-item">
-                        <div class="cover"></div>
-                        <div>
-                        <h3>Design Patterns</h3>
-                        <p>Classic solutions to common software design challenges.</p>
-                        </div>
-                    </div>
+            <section id="library" className="p-10 bg-stone-50">
+                <h2 className="text-3xl py-6">Library</h2>
+                <div className="flex grid-cols-[repeat_minmax(200px,_1fr)] gap-6">
+
+                    <LibraryItem title="Clean Code" description="Robert C. Martin's guide to writing readable, maintainable code." />
+                    <LibraryItem title="The Pragmatic Programmer" description="Essential tips and philosophies for pragmatic software development." />
+                    <LibraryItem title="Design Patterns" description="Classic solutions to common software design challenges." />
+                    
                 </div>
             </section>
         </>

@@ -2,9 +2,19 @@ function Introduction() {
 
     return (
         <>
-            <section id="intro" class="intro">
-                <h2>About Me</h2>
-                <p>Hello! I'm Alex, a passionate fullstack developer with a flair for creating gamified experiences and tech-driven solutions. I love turning complex challenges into elegant code, and I'm always exploring new technologies and frameworks to level up my skills.</p>
+            <section id="intro" className="p-10 bg-stone-50">
+                <h2 className="text-3xl py-6">About Me</h2>
+                <p className="max-w-3xl">
+                    Recently graduated computer engineer with a strong passion for
+                    software development. I have several years of experience
+                    volunteering in organizations, and over two years of relevant job
+                    experience. My special expertise include building and delivering
+                    full-stack solutions on the web, solving complex problems
+                    programmatically, as well as engineering robust database
+                    solutions. The next item on my bucket list is securing an
+                    interesting and challenging career with both horizontal and
+                    vertical growth opportunities.
+            </p>
             </section>
         </>
     )

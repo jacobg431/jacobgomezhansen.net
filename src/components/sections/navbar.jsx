@@ -2,14 +2,14 @@ function Navbar() {
 
     return (
         <>
-            <nav>
-                <div class="logo">DEVPORT</div>
-                <div class="menu">
-                    <a href="#intro">About</a>
-                    <a href="#portfolio">Projects</a>
-                    <a href="#expertise">Skills</a>
-                    <a href="#library">Library</a>
-                    <a href="#contact">Contact</a>
+            <nav className="flex bg-stone-800 text-stone-50 p-10 justify-between">
+                <div className="text-lg">LOGO HERE</div>
+                <div className="flex gap-4">
+                    <a className="no-underline" href="#intro">About</a>
+                    <a className="no-underline" href="#portfolio">Projects</a>
+                    <a className="no-underline" href="#expertise">Skills</a>
+                    <a className="no-underline" href="#library">Library</a>
+                    <a className="no-underline" href="#contact">Contact</a>
                 </div>
             </nav>
         </>

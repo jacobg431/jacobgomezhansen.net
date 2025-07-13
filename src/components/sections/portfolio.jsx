@@ -1,16 +1,18 @@
-import PortfolioItem from "../ui/portfolioItem"
+import PortfolioItem from "../items/portfolioItem"
 
 function Portfolio() {
 
     return (
         <>
-            <section id="portfolio">
-                <h2>Portfolio</h2>
-                <div class="portfolio-list">
+            <section id="portfolio" className="p-10 bg-stone-50">
+                <h2 className="text-3xl py-6">Portfolio</h2>
+                <div className="flex grid-cols-[repeat_minmax(200px,_1fr)] gap-6">
 
-                    <PortfolioItem title="Project Titan" description="A web-based strategy game with real-time multiplayer features." />
-                    <PortfolioItem title="CodeForge" description="An interactive IDE in the browser, with live collaboration." />
-                    <PortfolioItem title="DataViz Pro" description="Dynamic dashboards for monitoring key performance metrics." />
+                    <PortfolioItem title="Automated Maintenance Scheduling" description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus." />
+                    <PortfolioItem title="Create a CV" description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus." />
+                    <PortfolioItem title="Make GPT Laugh" description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus." />
+                    <PortfolioItem title="Ballads of the Wild" description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus." />
+                    <PortfolioItem title="Bards of the Wild" description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus." />
 
                 </div>
             </section>
