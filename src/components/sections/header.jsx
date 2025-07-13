@@ -1,5 +1,4 @@
 function Header() {
-
     return (
         <>
             <header className="flex items-center justify-between p-10 bg-stone-300 gap-8">
@@ -8,7 +7,6 @@ function Header() {
             </header>
         </>
     )
-
 }
 
 export default Header

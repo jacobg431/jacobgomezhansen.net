@@ -1,7 +1,6 @@
-import ExpertiseItem from "../items/expertiseItem"
+import ExpertiseItem from '../items/expertiseItem'
 
 function Expertise() {
-
     return (
         <>
             <section id="expertise" className="p-10 bg-stone-50">
@@ -24,7 +23,6 @@ function Expertise() {
             </section>
         </>
     )
-
 }
 
 export default Expertise
