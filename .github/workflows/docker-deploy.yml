@@ -32,6 +32,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             docker pull jacobg431/jacobgomezhansen.net:latest
-            docker stop jacobgomezhansen || true
-            docker rm jacobgomezhansen || true
+            docker stop jacobgomezhansen.net || true
+            docker rm jacobgomezhansen.net || true
             docker run -d --name jacobgomezhansen.net -p 3000:3000 jacobg431/jacobgomezhansen.net:latest
