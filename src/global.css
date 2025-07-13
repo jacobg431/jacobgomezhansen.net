@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
     --bg-light: #f2f2f2;
@@ -11,7 +11,9 @@
     --gap: 1.5rem;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -22,4 +24,3 @@ body {
     min-width: 320px;
     min-height: 100vh;
 }
-

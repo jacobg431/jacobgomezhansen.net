@@ -1,5 +1,4 @@
 function LibraryItem(props) {
-
     return (
         <>
             <div className="flex p-6 gap-6 items-center bg-stone-300 rounded-xl">
@@ -11,7 +10,6 @@ function LibraryItem(props) {
             </div>
         </>
     )
-
 }
 
 export default LibraryItem
