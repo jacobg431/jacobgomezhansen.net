@@ -2,8 +2,12 @@ function Footer() {
     return (
         <>
             <footer id="contact" className="bg-stone-800 text-gray-50 text-center p-6">
-                <p>© 2025 Alex Developer | Built with passion & codesmith magic.</p>
-                <p>Stay connected: <a href="#">Twitter</a> | <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+                <p>© 2025 Jacob Gomez Hansen | Something, something clever ...</p>
+                <p>
+                    Stay connected:&nbsp; 
+                    <a target="_blank" href="https://www.linkedin.com/in/jacob-gomez-hansen/">LinkedIn</a> |&nbsp;
+                    <a target="_blank" href="https://github.com/jacobg431">GitHub</a>
+                </p>
             </footer>
         </>
     )
