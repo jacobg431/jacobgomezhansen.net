@@ -34,4 +34,4 @@ jobs:
             docker pull jacobg431/jacobgomezhansen.net:latest
             docker stop jacobgomezhansen.net || true
             docker rm jacobgomezhansen.net || true
-            docker run -d --name jacobgomezhansen.net -p 3000:3000 jacobg431/jacobgomezhansen.net:latest
+            docker run -d --name jacobgomezhansen.net -p 5173:5173 jacobg431/jacobgomezhansen.net:latest
