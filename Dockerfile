@@ -13,12 +13,15 @@ RUN npm ci
 # Copy the rest of your app's source code from your host to your image filesystem.
 COPY . .
 
+# Build the app
+RUN npm run build
+
 # Make port 5173 available to the world outside this container
 EXPOSE 5173
 
 # Define environment variables
-ENV PORT=5173
 ENV NODE_ENV=production
+ENV PORT=5173
 
 # Run the app when the container launches
 CMD ["npm", "run", "prod"]
