@@ -15,6 +15,7 @@ COPY . .
 
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
+ENV PORT=3000
 
 # Define environment variable
 ENV NODE_ENV=production
