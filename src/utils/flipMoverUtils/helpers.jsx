@@ -1,4 +1,4 @@
-export const find = (predicate) => (boolean, arr) => {
+export const find = (predicate, arr) => {
     for (let i = 0; i < arr.length; i++) {
         if (predicate(arr[i], i, arr)) {
             return arr[i]
@@ -8,7 +8,7 @@ export const find = (predicate) => (boolean, arr) => {
     return undefined
 }
 
-export const every = (predicate) => (boolean, arr) => {
+export const every = (predicate, arr) => {
     for (let i = 0; i < arr.length; i++) {
         if (!predicate(arr[i], i, arr)) {
             return false

@@ -1,5 +1,5 @@
 import { Children, Component, cloneElement, createElement, createRef } from 'react'
-import ReactDOM from 'react-dom'
+import { defaultPreset } from '../../utils/flipMoverUtils/enterLeavePresets'
 
 import {
     applyStylesToDOMNode,
@@ -19,7 +19,12 @@ const transitionEnd = whichTransitionEvent()
 const noBrowserSupport = !transitionEnd
 
 function getKey(childData) {
-    return childData.key || ''
+    if (!childData.key) {
+        console.warn('Each child must have a unique key', childData)
+        return null;
+    }
+
+    return childData.key
 }
 
 function getElementChildren(children) {
@@ -27,6 +32,26 @@ function getElementChildren(children) {
 }
 
 class FlipMove extends Component {
+    constructor(props) {
+        super(props)
+        this.divRef = createRef()
+    }
+
+    static defaultProps = {
+        easing: 'ease-in-out',
+        duration: 350,
+        delay: 0,
+        staggerDurationBy: 0,
+        staggerDelayBy: 0,
+        typeName: 'div',
+        enterAnimation: defaultPreset,
+        leaveAnimation: defaultPreset,
+        disableAllAnimations: false,
+        getPosition: (node) => node.getBoundingClientRect(),
+        maintainContainerHeight: false,
+        verticalAlignment: 'top',
+    }
+
     state = {
         children: getElementChildren(this.props?.children).map((element) => ({
             key: element.key,
@@ -45,8 +70,6 @@ class FlipMove extends Component {
     }
     remainingAnimations = 0
     childrenToAnimate = []
-
-    divRef = createRef()
 
     componentDidMount() {
         // Because React 16 no longer requires wrapping elements, Flip Move can opt
@@ -82,6 +105,9 @@ class FlipMove extends Component {
 
         const shouldTriggerFLIP =
             !arraysEqual(oldChildrenKeys, nextChildrenKeys) && !this.isAnimationDisabled(this.props)
+        //console.log("Old: " + oldChildrenKeys)
+        //console.log("New: " + nextChildrenKeys)
+        //console.log("Not equal: " + !arraysEqual(oldChildrenKeys, nextChildrenKeys))
 
         if (shouldTriggerFLIP) {
             this.prepForAnimation()
@@ -114,7 +140,11 @@ class FlipMove extends Component {
 
         // Splitting DOM reads and writes to be peformed in batches
         const childrenInitialStyles = dynamicChildren.map((child) => this.computeInitialStyles(child))
+        console.log(childrenInitialStyles)
         dynamicChildren.forEach((child, index) => {
+
+            if (childrenInitialStyles[index] == null) return
+
             this.remainingAnimations += 1
             this.childrenToAnimate.push(getKey(child))
             this.animateChild(child, index, childrenInitialStyles[index])
@@ -164,50 +194,35 @@ class FlipMove extends Component {
     }
 
     calculateNextSetOfChildren(nextChildren) {
-        // We want to:
-        //   - Mark all new children as `entering`
-        //   - Pull in previous children that aren't in nextChildren, and mark them
-        //     as `leaving`
-        //   - Preserve the nextChildren list order, with leaving children in their
-        //     appropriate places.
-        //
+        // 1) Map the incoming array of React elements into state‑shape
+        const updatedChildren = nextChildren.map((element) => ({
+            key: element.key,
+            element,
+            apppearing: true,
+        }))
 
-        // Start by marking new children as 'entering'
-        const updatedChildren = nextChildren.map((nextChild) => {
-            const child = this.findChildByKey(nextChild.key)
-
-            // If the current child did exist, but it was in the midst of leaving,
-            // we want to treat it as though it's entering
-            const isEntering = !child || child.leaving
-
-            return { ...nextChild, element: nextChild, entering: isEntering }
-        })
-
-        // This is tricky. We want to keep the nextChildren's ordering, but with
-        // any just-removed items maintaining their original position.
-        // eg.
-        //   this.state.children  = [ 1, 2, 3, 4 ]
-        //   nextChildren         = [ 3, 1 ]
-        //
-        // In this example, we've removed the '2' & '4'
-        // We want to end up with:  [ 2, 3, 1, 4 ]
-        //
-        // To accomplish that, we'll iterate through this.state.children. whenever
-        // we find a match, we'll append our `leaving` flag to it, and insert it
-        // into the nextChildren in its ORIGINAL position. Note that, as we keep
-        // inserting old items into the new list, the "original" position will
-        // keep incrementing.
         let numOfChildrenLeaving = 0
+
+        // 2) Walk your old state, find the ones that aren’t in nextChildren…
         this.state.children.forEach((child, index) => {
-            const isLeaving = !find(({ key }) => key === getKey(child), nextChildren)
+            const origKey = getKey(child)
+            const isLeaving = !find(({ key }) => key === origKey, nextChildren)
 
-            // If the child isn't leaving (or, if there is no leave animation),
-            // we don't need to add it into the state children.
             if (!isLeaving || !this.props.leaveAnimation) return
+            
+            // 3) Build a new unique key, and clone the element itself
+            const leaveKey = `${origKey}-leave-${index}`
+            console.log(child)
+            const leavingClone = cloneElement(child.element, { key: leaveKey })
 
-            const nextChild = { ...child, leaving: true }
             const nextChildIndex = index + numOfChildrenLeaving
+            const nextChild = {
+                key: leaveKey,
+                element: leavingClone,
+                leaving: true,
+            }
 
+            // 4) Splice it into the updatedChildren array
             updatedChildren.splice(nextChildIndex, 0, nextChild)
             numOfChildrenLeaving += 1
         })
@@ -570,7 +585,6 @@ class FlipMove extends Component {
         // been set to 0, there is no point in trying to animate; doing so would
         // only cause a flicker (and the intent is probably to disable animations)
         // We can also skip this rigamarole if there's no browser support for it.
-        console.log(noBrowserSupport)
         return (
             noBrowserSupport ||
             props.disableAllAnimations ||
@@ -664,6 +678,6 @@ class FlipMove extends Component {
     }
 }
 
-//const enhancedFlipMove = propConverter(FlipMove)
+//const enhancedFlipMove = /* #__PURE__ */ propConverter(FlipMove)
 
 export default FlipMove
