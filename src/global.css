@@ -3,8 +3,8 @@
 @theme {
     --color-black: #292524;
     --color-white: #fafaf9;
-    --color-red: #FF6167;
-    --text-green: #ACFFB1;
+    --color-red: #ff6167;
+    --text-green: #acffb1;
 
     --animate-pulse: pulse 2s ease-in-out infinite;
 }
