@@ -1,24 +1,16 @@
+import NavbarItem from "../items/navbarItem"
+
 function Navbar() {
     return (
         <>
-            <nav className="flex bg-stone-800 text-stone-50 p-10 justify-between">
+            <nav className="flex bg-black text-white font-bold p-10 justify-between">
                 <div className="text-lg">LOGO HERE</div>
                 <div className="flex gap-4">
-                    <a className="no-underline" href="#intro">
-                        About
-                    </a>
-                    <a className="no-underline" href="#portfolio">
-                        Projects
-                    </a>
-                    <a className="no-underline" href="#expertise">
-                        Skills
-                    </a>
-                    <a className="no-underline" href="#library">
-                        Library
-                    </a>
-                    <a className="no-underline" href="#contact">
-                        Contact
-                    </a>
+                    <NavbarItem title="About" href="#intro"/>
+                    <NavbarItem title="Projects" href="#portfolio" />
+                    <NavbarItem title="Skills" href="#expertise" />
+                    <NavbarItem title="Library" href="#library" />
+                    <NavbarItem title="Contact" href="#contact" />
                 </div>
             </nav>
         </>
