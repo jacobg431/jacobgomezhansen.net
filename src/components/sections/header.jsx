@@ -30,11 +30,14 @@ function Header() {
     //          <div key={`avatar`} className="w-32 min-w-32 h-32 min-h-32 rounded-full bg-stone-800"></div>,
     //      ]
 
+    const avatarStyling = 'w-32 h-32 rounded-full border-4 bg-center bg-contain bg-[url(/src/assets/Profile-Picture-256-Px.webp)]'
+    const textStyling = 'text-4xl font-bold'
+
     return (
         <>
             <header
                 id="header"
-                className="flex items-center p-10 bg-stone-300 gap-8 relative"
+                className="flex items-center p-10 border-b-4 border-b-red gap-8 relative hover:bg-black duration-400"
                 style={{ justifyContent: flipped ? 'center' : 'space-between' }} 
                 onMouseOver={onHeaderMouseOver}
                 onMouseOut={onHeaderMouseOut}
@@ -44,8 +47,9 @@ function Header() {
                         <Motion.div 
                             key={id} 
                             layout 
-                            transition={{ duration: 0.4 }}
-                            className={id === 'avatar' ? 'w-32 h-32 rounded-full bg-stone-800' : 'text-4xl font-bold'} 
+                            animate={{ color: flipped ? 'var(--color-red)' : 'var(--color-black)' }}
+                            transition={{ duration: 0.4, ease: 'easeOut' }}
+                            className={id === 'avatar' ? avatarStyling : textStyling} 
                         >
                             {id === 'text' && "Welcome! I'm Jacob, Fullstack Developer"}
                         </Motion.div>

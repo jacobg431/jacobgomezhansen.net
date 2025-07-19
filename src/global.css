@@ -2,9 +2,10 @@
 
 @theme {
     --color-black: #292524;
+    --color-gray: #d6d3d1;
     --color-white: #fafaf9;
     --color-red: #ff6167;
-    --text-green: #acffb1;
+    --color-green: #acffb1;
 
     --animate-pulse: pulse 2s ease-in-out infinite;
 }
