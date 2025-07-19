@@ -21,7 +21,7 @@ const noBrowserSupport = !transitionEnd
 function getKey(childData) {
     if (!childData.key) {
         console.warn('Each child must have a unique key', childData)
-        return null;
+        return null
     }
 
     return childData.key
@@ -140,9 +140,7 @@ class FlipMove extends Component {
 
         // Splitting DOM reads and writes to be peformed in batches
         const childrenInitialStyles = dynamicChildren.map((child) => this.computeInitialStyles(child))
-        console.log(childrenInitialStyles)
         dynamicChildren.forEach((child, index) => {
-
             if (childrenInitialStyles[index] == null) return
 
             this.remainingAnimations += 1
@@ -195,36 +193,39 @@ class FlipMove extends Component {
 
     calculateNextSetOfChildren(nextChildren) {
         // 1) Map the incoming array of React elements into state‑shape
-        const updatedChildren = nextChildren.map((element) => ({
-            key: element.key,
-            element,
-            apppearing: true,
-        }))
+        const updatedChildren = nextChildren.map((element) => {
+            const child = this.findChildByKey(element.key)
+            const isEntering = !child || child.leaving
+            return {key: element.key, element, entering: isEntering}
+        }
+        
+        )
 
         let numOfChildrenLeaving = 0
 
         // 2) Walk your old state, find the ones that aren’t in nextChildren…
         this.state.children.forEach((child, index) => {
             const origKey = getKey(child)
-            const isLeaving = !find(({ key }) => key === origKey, nextChildren)
+            const isLeaving = !nextChildren.find((e) => e.key === origKey)
+
+            console.log("Is not leaving: " + !isLeaving)
+            console.log("No leave animation: " + !this.props.leaveAnimation)
 
             if (!isLeaving || !this.props.leaveAnimation) return
-            
-            // 3) Build a new unique key, and clone the element itself
-            const leaveKey = `${origKey}-leave-${index}`
-            console.log(child)
-            const leavingClone = cloneElement(child.element, { key: leaveKey })
 
-            const nextChildIndex = index + numOfChildrenLeaving
+            // 3) Build a new unique key, and clone the element itself
+            
             const nextChild = {
-                key: leaveKey,
-                element: leavingClone,
+                ...child,
                 leaving: true,
             }
+
+            const nextChildIndex = index + numOfChildrenLeaving;
 
             // 4) Splice it into the updatedChildren array
             updatedChildren.splice(nextChildIndex, 0, nextChild)
             numOfChildrenLeaving += 1
+            console.log(updatedChildren)
         })
 
         return updatedChildren
@@ -290,7 +291,7 @@ class FlipMove extends Component {
         })
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         // When the component is handed new props, we need to figure out the
         // "resting" position of all currently-rendered DOM nodes.
         // We store that data in this.parent and this.children,

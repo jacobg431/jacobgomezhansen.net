@@ -14,16 +14,16 @@ function Header() {
 
     const elements = flipped
         ? [
-              <div key={`avatar-${flipped}`} className="w-32 min-w-32 h-32 min-h-32 rounded-full bg-stone-800"></div>,
-              <div key={`text-${flipped}`} className="text-4xl font-bold">
+              <div key={`avatar`} className="w-32 min-w-32 h-32 min-h-32 rounded-full bg-stone-800"></div>,
+              <div key={`text`} className="text-4xl font-bold">
                   Welcome! I'm Jacob, Fullstack Developer
               </div>,
           ]
         : [
-              <div key={`text-${flipped}`} className="text-4xl font-bold">
+              <div key={`text`} className="text-4xl font-bold">
                   Welcome! I'm Jacob, Fullstack Developer
               </div>,
-              <div key={`avatar-${flipped}`} className="w-32 min-w-32 h-32 min-h-32 rounded-full bg-stone-800"></div>,
+              <div key={`avatar`} className="w-32 min-w-32 h-32 min-h-32 rounded-full bg-stone-800"></div>,
           ]
 
     return (
