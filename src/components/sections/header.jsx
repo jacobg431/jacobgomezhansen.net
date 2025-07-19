@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion as Motion, AnimatePresence } from 'framer-motion'
 function Header() {
     const [flipped, setFlipped] = useState(false)
     const items = flipped ? [
@@ -34,20 +34,21 @@ function Header() {
         <>
             <header
                 id="header"
-                className="flex items-center justify-between p-10 bg-stone-300 gap-8 relative"
+                className="flex items-center p-10 bg-stone-300 gap-8 relative"
+                style={{ justifyContent: flipped ? 'center' : 'space-between' }} 
                 onMouseOver={onHeaderMouseOver}
                 onMouseOut={onHeaderMouseOut}
             >
                 <AnimatePresence>
                     {items.map((id) => (
-                        <motion.div 
+                        <Motion.div 
                             key={id} 
                             layout 
                             transition={{ duration: 0.4 }}
                             className={id === 'avatar' ? 'w-32 h-32 rounded-full bg-stone-800' : 'text-4xl font-bold'} 
                         >
                             {id === 'text' && "Welcome! I'm Jacob, Fullstack Developer"}
-                        </motion.div>
+                        </Motion.div>
                     ))}
                 </AnimatePresence>
             </header>
