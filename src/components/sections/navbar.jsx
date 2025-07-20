@@ -42,7 +42,7 @@ function Navbar() {
 
     const navbarContainerStyling = smallScreen ? 'hidden' : 'flex gap-4'
     const navbarMobileContainerStyling = openMenu
-        ? 'flex w-full h-full z-10 absolute top-0 flex-col items-center justify-center gap-4 text-white font-bold bg-black transition-[height] duration-400'
+        ? 'flex w-full h-full z-10 absolute top-0 flex-col items-center justify-center gap-4 text-xl text-white font-bold bg-black transition-[height] duration-400'
         : 'flex w-full h-0 z-10 absolute -top-32 text-white font-bold bg-black transition-[height] duration-400'
     const navbarMobileMenuIcon = smallScreen ? (
         <FontAwesomeIcon icon="bars" size="xl" className="z-20" onClick={handleNavbarMenuClick} />
