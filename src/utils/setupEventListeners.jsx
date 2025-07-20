@@ -1,5 +1,5 @@
-export function setupNavbarClickEvents() {
-    const container = document.getElementById('navbar-container')
+export function setupNavbarClickEvents(elementId) {
+    const container = document.getElementById(elementId)
     if (!container) return () => {}
 
     const items = container.querySelectorAll('a')
