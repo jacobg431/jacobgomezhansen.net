@@ -1,8 +1,28 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { motion as Motion, AnimatePresence } from 'framer-motion'
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
+
 function Header() {
     const [flipped, setFlipped] = useState(false)
     const items = flipped ? ['avatar', 'text'] : ['text', 'avatar']
+
+    const avatarStyling =
+        'w-32 h-32 rounded-full border-4 bg-center bg-contain bg-[url(/src/assets/Profile-Picture-256-Px.webp)]'
+    const textStyling = 'inline-block whitespace-pre text-4xl font-mono font-bold'
+
+    const typewriterStrings = ['Software Developer', 'Embedded Programmer', 'Computer Engineer']
+    const typewriterLength = Math.max(...typewriterStrings.map((s) => s.length))
+
+    const [typewriterText] = useTypewriter({
+        words: typewriterStrings,
+        loop: true,
+        delaySpeed: 3000,
+    })
+
+    const typewriterPaddedText = useMemo(() => {
+        const padCount = typewriterLength - typewriterText.length
+        return typewriterText + '\u00A0'.repeat(padCount)
+    }, [typewriterText, typewriterLength])
 
     function onHeaderMouseOver() {
         setFlipped(true)
@@ -11,24 +31,6 @@ function Header() {
     function onHeaderMouseOut() {
         setFlipped(false)
     }
-
-    //const elements = flipped
-    //    ? [
-    //          <div key={`avatar`} className="w-32 min-w-32 h-32 min-h-32 rounded-full bg-stone-800"></div>,
-    //          <div key={`text`} className="text-4xl font-bold">
-    //              Welcome! I'm Jacob, Fullstack Developer
-    //          </div>,
-    //      ]
-    //    : [
-    //          <div key={`text`} className="text-4xl font-bold">
-    //              Welcome! I'm Jacob, Fullstack Developer
-    //          </div>,
-    //          <div key={`avatar`} className="w-32 min-w-32 h-32 min-h-32 rounded-full bg-stone-800"></div>,
-    //      ]
-
-    const avatarStyling =
-        'w-32 h-32 rounded-full border-4 bg-center bg-contain bg-[url(/src/assets/Profile-Picture-256-Px.webp)]'
-    const textStyling = 'text-4xl font-bold'
 
     return (
         <>
@@ -48,7 +50,8 @@ function Header() {
                             transition={{ duration: 0.4, ease: 'easeOut' }}
                             className={id === 'avatar' ? avatarStyling : textStyling}
                         >
-                            {id === 'text' && "Welcome! I'm Jacob, Fullstack Developer"}
+                            {id === 'text' && "Welcome! I'm Jacob, "}
+                            {id === 'text' && typewriterPaddedText}
                         </Motion.div>
                     ))}
                 </AnimatePresence>
