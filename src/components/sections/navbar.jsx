@@ -41,13 +41,17 @@ function Navbar() {
     library.add(faBars)
 
     const navbarContainerStyling = smallScreen ? 'hidden' : 'flex gap-4'
-    const navbarMobileContainerStyling = openMenu ? 'flex w-full h-full z-10 absolute m-auto flex-col items-center justify-center gap-4 text-white font-bold bg-black' : 'hidden'
-    const navbarMobileMenuIcon = smallScreen ? <FontAwesomeIcon icon="bars" size="xl" onClick={handleNavbarMenuClick} /> : null
+    const navbarMobileContainerStyling = openMenu
+        ? 'flex w-full h-full z-10 absolute top-0 flex-col items-center justify-center gap-4 text-white font-bold bg-black transition-[height] duration-400'
+        : 'flex w-full h-0 z-10 absolute -top-32 text-white font-bold bg-black transition-[height] duration-400'
+    const navbarMobileMenuIcon = smallScreen ? (
+        <FontAwesomeIcon icon="bars" size="xl" className="z-20" onClick={handleNavbarMenuClick} />
+    ) : null
 
     return (
         <>
             <nav className="flex bg-black text-white font-bold p-10 justify-between">
-                <div className="w-32 bg-center bg-contain bg-no-repeat bg-[url(/src/assets/Personal-Logo-Trans-Negative-256-Px.webp)]"></div>
+                <div className="w-32 z-20 bg-center bg-contain bg-no-repeat bg-[url(/src/assets/Personal-Logo-Trans-Negative-256-Px.webp)]"></div>
                 {navbarMobileMenuIcon}
                 <div id="navbar-container" className={navbarContainerStyling}>
                     <NavbarItem id="navbar-intro" title="About" href="#intro" />
