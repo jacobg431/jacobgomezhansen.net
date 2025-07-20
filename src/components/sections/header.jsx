@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { motion as Motion, AnimatePresence } from 'framer-motion'
-import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { useTypewriter } from 'react-simple-typewriter'
 
 function Header() {
     const [flipped, setFlipped] = useState(false)
