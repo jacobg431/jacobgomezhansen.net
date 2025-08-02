@@ -51,7 +51,11 @@ function Navbar() {
     return (
         <>
             <nav className="flex bg-black text-white font-bold p-10 justify-between">
-                <div className="w-32 z-20 bg-center bg-contain bg-no-repeat bg-[url(/src/assets/Personal-Logo-Trans-Negative-256-Px.webp)]"></div>
+                <img
+                    src='/src/assets/Personal-Logo-Trans-Negative-256-Px.webp'
+                    alt='Personal logo. The initials "JGH" stands for "Jacob Gomez Hansen".' 
+                    className="h-6 z-20 bg-center bg-contain bg-no-repeat bg-[url()]"
+                ></img>
                 {navbarMobileMenuIcon}
                 <div id="navbar-container" className={navbarContainerStyling}>
                     <NavbarItem id="navbar-intro" title="About" href="#intro" />
