@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import NavbarItem from '../items/navbarItem'
-import { setupNavbarClickEvents } from '../../utils/setupEventListeners'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import NavbarItem from '../items/navbarItem'
+import { setupNavbarClickEvents } from '../../utils/setupEventListeners'
+import personalLogo from '../../assets/Personal-Logo-Trans-Negative-256-Px.webp'
 
 function Navbar() {
     function isSmallScreen() {
@@ -52,9 +53,9 @@ function Navbar() {
         <>
             <nav className="flex bg-black text-white font-bold p-10 justify-between">
                 <img
-                    src="/src/assets/Personal-Logo-Trans-Negative-256-Px.webp"
+                    src={personalLogo}
                     alt='Personal logo. The initials "JGH" stands for "Jacob Gomez Hansen".'
-                    className="h-6 z-20 bg-center bg-contain bg-no-repeat bg-[url()]"
+                    className="h-6 z-20"
                 ></img>
                 {navbarMobileMenuIcon}
                 <div id="navbar-container" className={navbarContainerStyling}>
