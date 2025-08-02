@@ -33,13 +33,7 @@ function Header() {
     const device = useDeviceDetection()
 
     const headerContentMap = {
-        avatar: (
-            <img
-                src={profilePicture}
-                alt="Profile picture of Jacob Gomez Hansen"
-                className={avatarStyling}
-            ></img>
-        ),
+        avatar: <img src={profilePicture} alt="Profile picture of Jacob Gomez Hansen" className={avatarStyling}></img>,
         text: (
             <div className={typewriterWrapperStyling}>
                 <span className={preTypewriterStyling}>Welcome! I'm Jacob, </span>
