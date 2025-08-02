@@ -33,7 +33,7 @@ function Header() {
 
     const headerContentMap = {
         avatar: (
-            <img src="src/assets/Profile-Picture-256-Px.webp" alt="Profile Picture" className={avatarStyling}></img>
+            <img src="src/assets/Profile-Picture-256-Px.webp" alt="Profile picture of Jacob Gomez Hansen" className={avatarStyling}></img>
         ),
         text: (
             <div className={typewriterWrapperStyling}>
