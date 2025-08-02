@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { motion as Motion, AnimatePresence } from 'framer-motion'
 import { useTypewriter } from 'react-simple-typewriter'
 import { useDeviceDetection } from '../../hooks/useDeviceDetection'
+import profilePicture from '../../assets/Profile-Picture-256-Px.webp'
 
 function Header() {
     // Regular constants
@@ -34,7 +35,7 @@ function Header() {
     const headerContentMap = {
         avatar: (
             <img
-                src="src/assets/Profile-Picture-256-Px.webp"
+                src={profilePicture}
                 alt="Profile picture of Jacob Gomez Hansen"
                 className={avatarStyling}
             ></img>
