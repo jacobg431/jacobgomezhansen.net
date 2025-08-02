@@ -4,14 +4,17 @@ import { useTypewriter } from 'react-simple-typewriter'
 import { setupDeviceDetectionEvents } from '../../utils/setupEventListeners'
 
 function Header() {
+    // Regular constants
+    const avatarStyling =
+        'min-w-20 h-20 xs:min-w-24 xs:h-24 sm:min-w-28 sm:h-28 md:min-w-32 md:h-32 md: rounded-full border-4 bg-center bg-contain bg-[url(/src/assets/Profile-Picture-256-Px.webp)]'
+    const typewriterWrapperStyling = 'inline-block w-[12rem] xs:w-[16rem] sm:w-[20rem] lg:w-auto text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-mono font-bold'
+    const preTypewriterStyling = 'inline-block w-auto whitespace-pre'
+    const typewriterStyling = 'inline-block w-auto xs:min-h-0 items-center whitespace-normal'
+    const typewriterStrings = ['Software Developer', 'Embedded Programmer', 'Computer Engineer']
+
+    // State-related constants
     const [flipped, setFlipped] = useState(false)
     const items = flipped ? ['avatar', 'text'] : ['text', 'avatar']
-
-    const avatarStyling =
-        'min-w-24 h-24 xs:min-w-28 xs:h-28 sm:min-w-32 sm:h-32 rounded-full border-4 bg-center bg-contain bg-[url(/src/assets/Profile-Picture-256-Px.webp)]'
-    const textStyling = 'inline-block text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-mono font-bold whitespace-normal'
-
-    const typewriterStrings = ['Software Developer', 'Embedded Programmer', 'Computer Engineer']
     const typewriterLength = Math.max(...typewriterStrings.map((s) => s.length))
 
     const [typewriterText] = useTypewriter({
@@ -27,13 +30,28 @@ function Header() {
 
     const device = setupDeviceDetectionEvents()
 
+    const headerContentMap = {
+        avatar: <div className={avatarStyling}></div>,
+        text: (
+            <div className={typewriterWrapperStyling}>
+                <span className={preTypewriterStyling}>
+                    Welcome! I'm Jacob,{' '}
+                </span>
+                <span className={typewriterStyling}>
+                    {typewriterPaddedText}
+                </span>
+            </div>
+        )
+    }
+
+    // Functions
     function onHeaderMouseEnter() {
-        console.log(device)
-        if (device !== 'Desktop') return
+        if (device !== 'Desktop' || flipped) return
         setFlipped(true)
     }
 
     function onHeaderMouseLeave() {
+        if (!flipped) return
         setFlipped(false)
     }
 
@@ -47,23 +65,14 @@ function Header() {
                 onMouseLeave={onHeaderMouseLeave}
             >
                 <AnimatePresence>
-                    {items.map((id) => (
+                    {items.map(id => (
                         <Motion.div
                             key={id}
                             layout
                             animate={{ color: flipped ? 'var(--color-red)' : 'var(--color-black)' }}
                             transition={{ duration: 0.4, ease: 'easeOut' }}
-                            className={id === 'avatar' ? avatarStyling : textStyling}
                         >
-                            { id === 'text' && (
-                                <>
-                                    Welcome! I'm Jacob,{' '}
-                                    <span className="inline-block w-[12rem] xs:w-[18rem] sm:w-auto min-h-[3em] xs:min-h-0 items-center whitespace-normal">
-                                        {typewriterPaddedText}
-                                    </span>
-                                </>
-                            )}
-
+                            {headerContentMap[id]}
                         </Motion.div>
                     ))}
                 </AnimatePresence>
