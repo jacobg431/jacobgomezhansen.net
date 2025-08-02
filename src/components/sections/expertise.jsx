@@ -3,7 +3,7 @@ import ExpertiseItem from '../items/expertiseItem'
 function Expertise() {
     return (
         <>
-            <section id="expertise" className="p-10 bg-stone-50">
+            <section id="expertise" className="px-4 py-10 2xs:p-10 bg-stone-50">
                 <h2 className="text-3xl py-6">Expertise</h2>
                 <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-6">
                     <ExpertiseItem title="Full-Stack Programming" />

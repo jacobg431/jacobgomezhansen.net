@@ -10,7 +10,7 @@ function Header() {
     const typewriterWrapperStyling =
         'inline-block w-[12rem] xs:w-[16rem] sm:w-[20rem] lg:w-auto text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-mono font-bold'
     const preTypewriterStyling = 'inline-block w-auto whitespace-pre'
-    const typewriterStyling = 'inline-block w-auto xs:min-h-0 items-center whitespace-normal'
+    const typewriterStyling = 'inline-block w-auto min-h-0 items-center whitespace-normal'
     const typewriterStrings = ['Software Developer', 'Embedded Programmer', 'Computer Engineer']
 
     // State-related constants
@@ -58,7 +58,7 @@ function Header() {
         <>
             <header
                 id="header"
-                className="flex items-center p-10 border-b-4 border-b-red gap-8 relative hover:bg-black duration-400"
+                className="flex items-center px-4 py-10 2xs:p-10 gap-4 2xs:gap-8 border-b-4 border-b-red relative hover:bg-black duration-400"
                 style={{ justifyContent: flipped ? 'center' : 'space-between' }}
                 onMouseEnter={onHeaderMouseEnter}
                 onMouseLeave={onHeaderMouseLeave}

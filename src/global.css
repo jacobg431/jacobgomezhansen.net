@@ -10,6 +10,7 @@
     --animate-pulse: pulse 2s ease-in-out infinite;
 
     --breakpoint-xs: 30rem;
+    --breakpoint-2xs: 25rem;
 }
 
 *,
