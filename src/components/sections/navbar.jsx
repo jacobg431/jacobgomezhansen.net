@@ -52,8 +52,8 @@ function Navbar() {
         <>
             <nav className="flex bg-black text-white font-bold p-10 justify-between">
                 <img
-                    src='/src/assets/Personal-Logo-Trans-Negative-256-Px.webp'
-                    alt='Personal logo. The initials "JGH" stands for "Jacob Gomez Hansen".' 
+                    src="/src/assets/Personal-Logo-Trans-Negative-256-Px.webp"
+                    alt='Personal logo. The initials "JGH" stands for "Jacob Gomez Hansen".'
                     className="h-6 z-20 bg-center bg-contain bg-no-repeat bg-[url()]"
                 ></img>
                 {navbarMobileMenuIcon}
