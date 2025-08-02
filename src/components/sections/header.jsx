@@ -8,8 +8,8 @@ function Header() {
     const items = flipped ? ['avatar', 'text'] : ['text', 'avatar']
 
     const avatarStyling =
-        'min-w-32 h-32 rounded-full border-4 bg-center bg-contain bg-[url(/src/assets/Profile-Picture-256-Px.webp)]'
-    const textStyling = 'inline-block text-2xl sm:text-3xl lg:text-4xl font-mono font-bold whitespace-normal'
+        'min-w-24 h-24 xs:min-w-28 xs:h-28 sm:min-w-32 sm:h-32 rounded-full border-4 bg-center bg-contain bg-[url(/src/assets/Profile-Picture-256-Px.webp)]'
+    const textStyling = 'inline-block text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-mono font-bold whitespace-normal'
 
     const typewriterStrings = ['Software Developer', 'Embedded Programmer', 'Computer Engineer']
     const typewriterLength = Math.max(...typewriterStrings.map((s) => s.length))
@@ -58,7 +58,7 @@ function Header() {
                             { id === 'text' && (
                                 <>
                                     Welcome! I'm Jacob,{' '}
-                                    <span className="inline-block w-[10em] md:w-auto min-h-[2.7em] md:min-h-0 items-center whitespace-normal">
+                                    <span className="inline-block w-[12rem] xs:w-[18rem] sm:w-auto min-h-[3em] xs:min-h-0 items-center whitespace-normal">
                                         {typewriterPaddedText}
                                     </span>
                                 </>

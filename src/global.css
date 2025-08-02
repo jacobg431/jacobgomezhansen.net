@@ -8,6 +8,8 @@
     --color-green: #acffb1;
 
     --animate-pulse: pulse 2s ease-in-out infinite;
+
+    --breakpoint-xs: 30rem;
 }
 
 *,
@@ -21,6 +23,6 @@ body {
     display: flex;
     place-items: center;
     max-width: 100vw;
-    min-width: 480px;
+    min-width: 20rem;
     min-height: 100vh;
 }
