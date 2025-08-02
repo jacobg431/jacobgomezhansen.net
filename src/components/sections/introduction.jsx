@@ -1,7 +1,7 @@
 function Introduction() {
     return (
         <>
-            <section id="intro" className="p-10 bg-stone-50">
+            <section id="intro" className="px-4 py-10 2xs:p-10 bg-stone-50">
                 <h2 className="text-3xl py-6">About Me</h2>
                 <p className="max-w-3xl">
                     Recently graduated computer engineer with a strong passion for software development. I have several

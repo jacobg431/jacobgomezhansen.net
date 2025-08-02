@@ -1,18 +1,63 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import NavbarItem from '../items/navbarItem'
 import { setupNavbarClickEvents } from '../../utils/setupEventListeners'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar() {
+    function isSmallScreen() {
+        return window.innerWidth <= 1024
+    }
+
+    function handleNavbarMenuClick() {
+        if (!smallScreen) return
+        setOpenMenu(!openMenu)
+    }
+
     useEffect(() => {
-        const cleanup = setupNavbarClickEvents()
+        const cleanup = setupNavbarClickEvents('navbar-container')
         return cleanup
     }, [])
+
+    useEffect(() => {
+        const cleanup = setupNavbarClickEvents('navbar-mobile-container')
+        return cleanup
+    }, [])
+
+    const [smallScreen, setSmallScreen] = useState(() => {
+        return isSmallScreen()
+    })
+
+    const [openMenu, setOpenMenu] = useState(false)
+
+    window.onresize = () => {
+        setSmallScreen(isSmallScreen())
+        if (!isSmallScreen()) {
+            setOpenMenu(false)
+        }
+    }
+
+    library.add(faBars)
+
+    const navbarContainerStyling = smallScreen ? 'hidden' : 'flex gap-4'
+    const navbarMobileContainerStyling = openMenu
+        ? 'flex w-full h-full z-10 absolute top-0 flex-col items-center justify-center gap-4 text-xl text-white font-bold bg-black transition-[height] duration-400'
+        : 'flex w-full h-0 z-10 absolute -top-32 text-white font-bold bg-black transition-[height] duration-400'
+    const navbarMobileMenuIcon = smallScreen ? (
+        <FontAwesomeIcon icon="bars" size="xl" className="z-20" onClick={handleNavbarMenuClick} />
+    ) : null
 
     return (
         <>
             <nav className="flex bg-black text-white font-bold p-10 justify-between">
-                <div className="w-32 bg-center bg-contain bg-no-repeat bg-[url(/src/assets/Personal-Logo-Trans-Negative-256-Px.webp)]"></div>
-                <div id="navbar-container" className="flex gap-4">
+                <img
+                    src="/src/assets/Personal-Logo-Trans-Negative-256-Px.webp"
+                    alt='Personal logo. The initials "JGH" stands for "Jacob Gomez Hansen".'
+                    className="h-6 z-20 bg-center bg-contain bg-no-repeat bg-[url()]"
+                ></img>
+                {navbarMobileMenuIcon}
+                <div id="navbar-container" className={navbarContainerStyling}>
                     <NavbarItem id="navbar-intro" title="About" href="#intro" />
                     <NavbarItem id="navbar-portfolio" title="Projects" href="#portfolio" />
                     <NavbarItem id="navbar-expertise" title="Skills" href="#expertise" />
@@ -20,6 +65,13 @@ function Navbar() {
                     <NavbarItem id="navbar-contact" title="Contact" href="#contact" />
                 </div>
             </nav>
+            <div id="navbar-mobile-container" className={navbarMobileContainerStyling} onClick={handleNavbarMenuClick}>
+                <NavbarItem id="navbar-mobile-intro" title="About" href="#intro" />
+                <NavbarItem id="navbar-mobile-portfolio" title="Projects" href="#portfolio" />
+                <NavbarItem id="navbar-mobile-expertise" title="Skills" href="#expertise" />
+                <NavbarItem id="navbar-mobile-library" title="Library" href="#library" />
+                <NavbarItem id="navbar-mobile-contact" title="Contact" href="#contact" />
+            </div>
         </>
     )
 }
