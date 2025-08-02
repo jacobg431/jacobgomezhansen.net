@@ -1,13 +1,14 @@
 import { useMemo, useState } from 'react'
 import { motion as Motion, AnimatePresence } from 'framer-motion'
 import { useTypewriter } from 'react-simple-typewriter'
-import { setupDeviceDetectionEvents } from '../../utils/setupEventListeners'
+import { useDeviceDetection } from '../../hooks/useDeviceDetection'
 
 function Header() {
     // Regular constants
     const avatarStyling =
         'min-w-20 h-20 xs:min-w-24 xs:h-24 sm:min-w-28 sm:h-28 md:min-w-32 md:h-32 md: rounded-full border-4'
-    const typewriterWrapperStyling = 'inline-block w-[12rem] xs:w-[16rem] sm:w-[20rem] lg:w-auto text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-mono font-bold'
+    const typewriterWrapperStyling =
+        'inline-block w-[12rem] xs:w-[16rem] sm:w-[20rem] lg:w-auto text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-mono font-bold'
     const preTypewriterStyling = 'inline-block w-auto whitespace-pre'
     const typewriterStyling = 'inline-block w-auto xs:min-h-0 items-center whitespace-normal'
     const typewriterStrings = ['Software Developer', 'Embedded Programmer', 'Computer Engineer']
@@ -28,26 +29,18 @@ function Header() {
         return typewriterText + '\u00A0'.repeat(padCount)
     }, [typewriterText, typewriterLength])
 
-    const device = setupDeviceDetectionEvents()
+    const device = useDeviceDetection()
 
     const headerContentMap = {
         avatar: (
-            <img
-                src='src/assets/Profile-Picture-256-Px.webp'
-                alt='Profile Picture'
-                className={avatarStyling}>
-            </img>
+            <img src="src/assets/Profile-Picture-256-Px.webp" alt="Profile Picture" className={avatarStyling}></img>
         ),
         text: (
             <div className={typewriterWrapperStyling}>
-                <span className={preTypewriterStyling}>
-                    Welcome! I'm Jacob,{' '}
-                </span>
-                <span className={typewriterStyling}>
-                    {typewriterPaddedText}
-                </span>
+                <span className={preTypewriterStyling}>Welcome! I'm Jacob, </span>
+                <span className={typewriterStyling}>{typewriterPaddedText}</span>
             </div>
-        )
+        ),
     }
 
     // Functions
@@ -71,7 +64,7 @@ function Header() {
                 onMouseLeave={onHeaderMouseLeave}
             >
                 <AnimatePresence>
-                    {items.map(id => (
+                    {items.map((id) => (
                         <Motion.div
                             key={id}
                             layout
