@@ -6,7 +6,7 @@ import { setupDeviceDetectionEvents } from '../../utils/setupEventListeners'
 function Header() {
     // Regular constants
     const avatarStyling =
-        'min-w-20 h-20 xs:min-w-24 xs:h-24 sm:min-w-28 sm:h-28 md:min-w-32 md:h-32 md: rounded-full border-4 bg-center bg-contain bg-[url(/src/assets/Profile-Picture-256-Px.webp)]'
+        'min-w-20 h-20 xs:min-w-24 xs:h-24 sm:min-w-28 sm:h-28 md:min-w-32 md:h-32 md: rounded-full border-4'
     const typewriterWrapperStyling = 'inline-block w-[12rem] xs:w-[16rem] sm:w-[20rem] lg:w-auto text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-mono font-bold'
     const preTypewriterStyling = 'inline-block w-auto whitespace-pre'
     const typewriterStyling = 'inline-block w-auto xs:min-h-0 items-center whitespace-normal'
@@ -31,7 +31,13 @@ function Header() {
     const device = setupDeviceDetectionEvents()
 
     const headerContentMap = {
-        avatar: <div className={avatarStyling}></div>,
+        avatar: (
+            <img
+                src='src/assets/Profile-Picture-256-Px.webp'
+                alt='Profile Picture'
+                className={avatarStyling}>
+            </img>
+        ),
         text: (
             <div className={typewriterWrapperStyling}>
                 <span className={preTypewriterStyling}>
