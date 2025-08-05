@@ -1,16 +1,20 @@
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { library } from '@fortawesome/fontawesome-svg-core'
+//import { faExternalLinkSquare } from '@fortawesome/free-solid-svg-icons'
 import greenPlanet from '../../assets/Green-Black-Planet.svg'
 import redPlanet from '../../assets/Red-Black-Planet.svg'
 import yellowPlanet from '../../assets/Yellow-Black-Planet.svg'
 
 function Introduction() {
 
-    const planetStyling = 'h-32 cursor-pointer hover:scale-150 duration-400 ease-out peer z-10'
-    const tooltipStyling = 'top-100 peer-hover:top-125 absolute px-3 py-1 text-white bg-black rounded-2xl opacity-0 peer-hover:opacity-100 duration-400 ease-out'
-
+    const introSectionStyling = 'flex flex-col lg:flex-row w-full gap-8 px-4 py-10 2xs:p-10 bg-white img.hover:bg-black group'
+    const planetStyling = 'h-24 xs:h-28 sm:h-32 cursor-pointer hover:scale-150 duration-400 ease-out peer z-10'
+    const tooltipStyling = 'top-16 peer-hover:top-32 absolute px-3 py-1 text-white bg-black rounded-2xl opacity-0 peer-hover:opacity-100 duration-400 ease-out'
+    const planetContainerStyling = 'relative flex justify-center z-5'
     return (
         <>
-            <section id="intro" className="flex w-full gap-8 px-4 py-10 2xs:p-10 bg-stone-50 img.hover:bg-black">
-                <p className="max-w-3xl text-justify">
+            <section id="intro" className={introSectionStyling}>
+                <p className="w-[100%] text-justify">
                     Recently graduated computer engineer with a strong passion for software development. I have several
                     years of experience volunteering in organizations, and over two years of relevant job experience. My
                     special expertise include building and delivering full-stack solutions on the web, solving complex
@@ -18,16 +22,17 @@ function Introduction() {
                     bucket list is securing an interesting and challenging career with both horizontal and vertical
                     growth opportunities.
                 </p>
-                <div className="flex w-full justify-center gap-8">
-                    <div className="flex justify-center">
+                <div className="flex flex-row w-full items-center justify-around">
+                    <span className="absolute text-[6rem] text-gray opacity-0 group-hover:opacity-50 duration-400 ease-out">Socials</span>
+                    <div className={planetContainerStyling}>
                         <img src={greenPlanet} alt="Flat vector image depicting a green planet" className={planetStyling} />
                         <div className={tooltipStyling}>GitHub</div>
                     </div>
-                    <div className="flex justify-center">
+                    <div className={planetContainerStyling}>
                         <img src={redPlanet} alt="Flat vector image depicting a yellow planet with rings" className={planetStyling} />
                         <div className={tooltipStyling}>LinkedIn</div>
                     </div>
-                    <div className="flex justify-center">
+                    <div className={planetContainerStyling}>
                         <img src={yellowPlanet} alt="Flat vector image depicting a red planet" className={planetStyling} />
                         <div className={tooltipStyling}>Message Me</div>
                     </div>
