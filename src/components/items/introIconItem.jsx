@@ -12,9 +12,9 @@ function IntroIconItem(props) {
     const defaultColor = '#292524'
 
     const resumeLanguageMap = {
-        default: '/src/assets/Resume Jacob Gomez Hansen - English Version.pdf',
-        danish: '/src/assets/Resume Jacob Gomez Hansen - Dansk Version.pdf',
-        norwegian: '/src/assets/Resume Jacob Gomez Hansen - Norsk Versjon.pdf',
+        default: '/src/assets/Resume-Jacob-Gomez-Hansen-English-Version.pdf',
+        danish: '/src/assets/Resume-Jacob-Gomez-Hansen-Dansk-Version.pdf',
+        norwegian: '/src/assets/Resume-Jacob-Gomez-Hansen-Norsk-Versjon.pdf',
     }
     const resumeLanguageUrl = resumeLanguageMap[getUserLanguage()]
 
