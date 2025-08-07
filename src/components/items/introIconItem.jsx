@@ -8,10 +8,15 @@ function IntroIconItem(props) {
     const tooltipStyling = 'top-16 peer-hover:top-32 absolute px-3 py-1 text-white bg-black rounded-2xl opacity-0 peer-hover:opacity-100 duration-400 ease-out'
     const defaultColor = '#292524'
 
-    const iconMap = {
+    const iconTypeMap = {
         'linkedin': ['fab', 'square-linkedin'],
         'github': ['fab', 'square-github'],
         'download': 'file-arrow-down'
+    }
+    const iconLinkMap = {
+        'linkedin': 'https://www.linkedin.com/in/jacob-gomez-hansen/',
+        'github': 'https://github.com/jacobg431',
+        'download': '#'
     }
 
     const [isHovering, setHovering] = useState(false)
@@ -19,15 +24,12 @@ function IntroIconItem(props) {
 
     const icon = (
         <FontAwesomeIcon
-            icon={iconMap[props.iconId]}
+            icon={iconTypeMap[props.iconId]}
             className={iconStyling}
             style={iconDynamicStyling}
-            onMouseEnter={() => {
-                return onIconMouseEnter(props.iconId)
-            }}
-            onMouseLeave={() => {
-                return onIconMouseLeave(props.iconId)
-            }}
+            onMouseEnter={onIconMouseEnter}
+            onMouseLeave={onIconMouseLeave}
+            onClick={onIconClick}
         />
     )
 
@@ -40,6 +42,10 @@ function IntroIconItem(props) {
 
     function onIconMouseLeave() {
         setHovering(false)
+    }
+
+    function onIconClick() {
+        window.open(iconLinkMap[props.iconId], '_blank')
     }
 
     return (
