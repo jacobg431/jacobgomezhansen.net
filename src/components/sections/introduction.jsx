@@ -4,7 +4,8 @@ import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import IntroIconItem from '../items/introIconItem'
 
 function Introduction() {
-    const introSectionStyling = 'flex flex-col lg:flex-row w-full gap-8 px-4 pt-10 2xs:p-10 bg-white img.hover:bg-black group'
+    const introSectionStyling =
+        'flex flex-col lg:flex-row w-full gap-8 px-4 pt-10 2xs:p-10 bg-white img.hover:bg-black group'
 
     library.add(faSquareLinkedin, faSquareGithub, faFileArrowDown)
 

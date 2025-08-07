@@ -3,7 +3,7 @@ function getUserLanguage() {
     var userLanguage
 
     console.log(userLanguageTag)
-    switch(userLanguageTag.toLowerCase()) {
+    switch (userLanguageTag.toLowerCase()) {
         case 'da':
             userLanguage = 'danish'
             break
@@ -14,7 +14,7 @@ function getUserLanguage() {
             userLanguage = 'default'
             break
     }
-    
+
     return userLanguage
 }
 
