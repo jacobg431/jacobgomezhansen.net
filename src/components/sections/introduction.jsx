@@ -12,7 +12,7 @@ function Introduction() {
     return (
         <>
             <section id="intro" className={introSectionStyling}>
-                <p className="w-[100%] text-justify">
+                <p className="w-[100%] text-sm xs:text-base text-justify">
                     Recently graduated computer engineer with a strong passion for software development. I have several
                     years of experience volunteering in organizations, and over two years of relevant job experience. My
                     special expertise include building and delivering full-stack solutions on the web, solving complex
