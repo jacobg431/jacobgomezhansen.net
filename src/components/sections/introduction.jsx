@@ -21,9 +21,9 @@ function Introduction() {
                     growth opportunities.
                 </p>
                 <div className="flex flex-row w-full items-center justify-around">
-                    <IntroIconItem iconId="linkedin" toopltip="LinkedIn" hoverColor="#0077b5" />
-                    <IntroIconItem iconId="github" toopltip="GitHub" hoverColor="#000" />
-                    <IntroIconItem iconId="download" toopltip="Download Resume" hoverColor="#ff6167" />
+                    <IntroIconItem iconId="linkedin" tooltip="LinkedIn" hoverColor="#0077b5" />
+                    <IntroIconItem iconId="github" tooltip="GitHub" hoverColor="#000" />
+                    <IntroIconItem iconId="download" tooltip="Resume" hoverColor="#ff6167" />
                 </div>
             </section>
         </>
