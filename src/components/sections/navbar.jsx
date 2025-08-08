@@ -51,7 +51,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="flex bg-black text-white font-bold p-10 justify-between">
+            <nav className="flex bg-black text-white font-bold px-4 2xs:px-10 sm:px-20 lg:px-40 py-10 justify-between">
                 <img
                     src={personalLogo}
                     alt='Personal logo. The initials "JGH" stands for "Jacob Gomez Hansen".'

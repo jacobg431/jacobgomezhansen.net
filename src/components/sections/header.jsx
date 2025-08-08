@@ -7,7 +7,7 @@ import profilePicture from '../../assets/Profile-Picture-256-Px.webp'
 function Header() {
     // Regular constants
     const headerSectionStyling =
-        'flex items-center px-4 py-10 2xs:p-10 gap-4 2xs:gap-8 border-b-4 border-b-red relative hover:bg-black duration-400'
+        'flex items-center px-4 2xs:px-10 sm:px-20 lg:px-40 py-10 gap-4 2xs:gap-8 border-b-4 border-b-red relative hover:bg-black duration-400'
     const avatarStyling =
         'min-w-20 h-20 xs:min-w-24 xs:h-24 sm:min-w-28 sm:h-28 md:min-w-32 md:h-32 md: rounded-full border-4'
     const typewriterWrapperStyling =
