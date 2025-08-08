@@ -21,7 +21,7 @@ function Introduction() {
                         bucket list is securing an interesting and challenging career with both horizontal and vertical
                         growth opportunities.
                     </p>
-                    <div className="flex flex-row w-full items-center">
+                    <div className="flex flex-row w-full items-center gap-4">
                         <IntroIconItem iconId="linkedin" tooltip="LinkedIn" hoverColor="#0077b5" />
                         <IntroIconItem iconId="github" tooltip="GitHub" hoverColor="#000" />
                         <IntroIconItem iconId="download" tooltip="Resume" hoverColor="#ff6167" />

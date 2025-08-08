@@ -9,7 +9,7 @@ function Portfolio() {
     return (
         <>
             <section id="portfolio" className={portfolioSectionStyling}>
-                <div className={portfolioInnerWrapperStyling}>¨
+                <div className={portfolioInnerWrapperStyling}>
                     <h2 className="text-3xl py-6">Portfolio</h2>
                     <div className={portfolioItemsContainerStyling}>
                         <PortfolioItem

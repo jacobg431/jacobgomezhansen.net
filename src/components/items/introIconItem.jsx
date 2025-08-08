@@ -4,11 +4,8 @@ import { useDeviceDetection } from '../../hooks/useDeviceDetection'
 import getUserLanguage from '../../utils/language'
 
 function IntroIconItem(props) {
-    const iconStyling =
-        'cursor-pointer scale-300 xs:scale-400 hover:scale-450 xs:hover:scale-600 duration-400 ease-out peer z-10'
-    const iconContainerStyling = 'relative flex w-18 h-18 xs:w-24 xs:h-24 items-center justify-center z-5'
-    const tooltipStyling =
-        'top-16 peer-hover:top-32 absolute px-4 py-2 text-center text-white bg-black rounded-3xl opacity-0 peer-hover:opacity-100 duration-400 ease-out'
+    const iconContainerStyling = 'relative flex items-center justify-center z-5'
+    const iconStyling = 'cursor-pointer duration-400 ease-out peer z-10 hover:animate-pulse'
     const defaultColor = '#292524'
 
     const resumeLanguageMap = {
@@ -37,6 +34,7 @@ function IntroIconItem(props) {
             icon={iconTypeMap[props.iconId]}
             className={iconStyling}
             style={iconDynamicStyling}
+            size='2xl'
             onMouseEnter={onIconMouseEnter}
             onMouseLeave={onIconMouseLeave}
             onClick={onIconClick}
@@ -62,7 +60,6 @@ function IntroIconItem(props) {
         <>
             <div className={iconContainerStyling}>
                 {icon}
-                <div className={tooltipStyling}>{props.tooltip}</div>
             </div>
         </>
     )
