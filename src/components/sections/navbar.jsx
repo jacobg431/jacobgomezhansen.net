@@ -41,6 +41,8 @@ function Navbar() {
 
     library.add(faBars)
 
+    const navbarSectionStyling = 'flex bg-black text-white font-bold px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 justify-center'
+    const navbarInnerWrapperStyling = 'flex w-full xl:max-w-[64rem] py-10 justify-between'
     const navbarContainerStyling = smallScreen ? 'hidden' : 'flex gap-4'
     const navbarMobileContainerStyling = openMenu
         ? 'flex w-full h-full z-10 absolute top-0 flex-col items-center justify-center gap-4 text-xl text-white font-bold bg-black transition-[height] duration-400'
@@ -51,19 +53,21 @@ function Navbar() {
 
     return (
         <>
-            <nav className="flex bg-black text-white font-bold px-4 2xs:px-10 sm:px-20 lg:px-40 py-10 justify-between">
-                <img
-                    src={personalLogo}
-                    alt='Personal logo. The initials "JGH" stands for "Jacob Gomez Hansen".'
-                    className="h-6 z-20"
-                ></img>
-                {navbarMobileMenuIcon}
-                <div id="navbar-container" className={navbarContainerStyling}>
-                    <NavbarItem id="navbar-intro" title="About" href="#intro" />
-                    <NavbarItem id="navbar-portfolio" title="Projects" href="#portfolio" />
-                    <NavbarItem id="navbar-expertise" title="Skills" href="#expertise" />
-                    <NavbarItem id="navbar-library" title="Library" href="#library" />
-                    <NavbarItem id="navbar-contact" title="Contact" href="#contact" />
+            <nav className={navbarSectionStyling}>
+                <div className={navbarInnerWrapperStyling}>
+                    <img
+                        src={personalLogo}
+                        alt='Personal logo. The initials "JGH" stands for "Jacob Gomez Hansen".'
+                        className="h-6 z-20"
+                    ></img>
+                    {navbarMobileMenuIcon}
+                    <div id="navbar-container" className={navbarContainerStyling}>
+                        <NavbarItem id="navbar-intro" title="About" href="#intro" />
+                        <NavbarItem id="navbar-portfolio" title="Projects" href="#portfolio" />
+                        <NavbarItem id="navbar-expertise" title="Skills" href="#expertise" />
+                        <NavbarItem id="navbar-library" title="Library" href="#library" />
+                        <NavbarItem id="navbar-contact" title="Contact" href="#contact" />
+                    </div>
                 </div>
             </nav>
             <div id="navbar-mobile-container" className={navbarMobileContainerStyling} onClick={handleNavbarMenuClick}>

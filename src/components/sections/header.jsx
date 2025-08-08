@@ -7,7 +7,8 @@ import profilePicture from '../../assets/Profile-Picture-256-Px.webp'
 function Header() {
     // Regular constants
     const headerSectionStyling =
-        'flex items-center px-4 2xs:px-10 sm:px-20 lg:px-40 py-10 gap-4 2xs:gap-8 border-b-4 border-b-red relative hover:bg-black duration-400'
+        'flex justify-center px-4 2xs:px-10 sm:px-20 lg:px-40  border-b-4 border-b-red relative hover:bg-black duration-400'
+    const headerInnerWrapperStyling = 'flex w-full xl:max-w-[64rem] items-center justify-between py-10 gap-4 2xs:gap-8'
     const avatarStyling =
         'min-w-20 h-20 xs:min-w-24 xs:h-24 sm:min-w-28 sm:h-28 md:min-w-32 md:h-32 md: rounded-full border-4'
     const typewriterWrapperStyling =
@@ -60,22 +61,24 @@ function Header() {
             <header
                 id="header"
                 className={headerSectionStyling}
-                style={{ justifyContent: flipped ? 'center' : 'space-between' }}
                 onMouseEnter={onHeaderMouseEnter}
                 onMouseLeave={onHeaderMouseLeave}
             >
-                <AnimatePresence>
-                    {items.map((id) => (
-                        <Motion.div
-                            key={id}
-                            layout
-                            animate={{ color: flipped ? 'var(--color-red)' : 'var(--color-black)' }}
-                            transition={{ duration: 0.4, ease: 'easeOut' }}
-                        >
-                            {headerContentMap[id]}
-                        </Motion.div>
-                    ))}
-                </AnimatePresence>
+                <div className={headerInnerWrapperStyling} 
+                style={{ justifyContent: flipped ? 'center' : 'space-between' }}>
+                    <AnimatePresence>
+                        {items.map((id) => (
+                            <Motion.div
+                                key={id}
+                                layout
+                                animate={{ color: flipped ? 'var(--color-red)' : 'var(--color-black)' }}
+                                transition={{ duration: 0.4, ease: 'easeOut' }}
+                            >
+                                {headerContentMap[id]}
+                            </Motion.div>
+                        ))}
+                    </AnimatePresence>
+                </div>
             </header>
         </>
     )
