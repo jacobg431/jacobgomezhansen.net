@@ -2,7 +2,6 @@ function getUserLanguage() {
     const userLanguageTag = navigator.language || navigator.userLanguage
     var userLanguage
 
-    console.log(userLanguageTag)
     switch (userLanguageTag.toLowerCase()) {
         case 'da':
             userLanguage = 'danish'
