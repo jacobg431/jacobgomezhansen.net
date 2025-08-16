@@ -14,22 +14,27 @@ function Portfolio() {
                     <div className={portfolioItemsContainerStyling}>
                         <PortfolioItem
                             title="Automated Maintenance Scheduling"
+                            imageUrl="bg-[url(/src/assets/Optiplan.webp)]"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                         <PortfolioItem
                             title="Create a CV"
+                            imageUrl="bg-[url(/src/assets/Create-a-CV.webp)]"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                         <PortfolioItem
                             title="Make GPT Laugh"
+                            imageUrl="bg-[url(/src/assets/Make-GPT-Laugh.webp)]"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                         <PortfolioItem
                             title="Ballads of the Wild"
+                            imageUrl="bg-[url(/src/assets/Ballads-of-the-wild.webp)]"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                         <PortfolioItem
                             title="Bards of the Wild"
+                            imageUrl="bg-[url(/src/assets/Bards-of-the-Wild.webp)]"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                     </div>
