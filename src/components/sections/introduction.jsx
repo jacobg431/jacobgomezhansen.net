@@ -4,7 +4,7 @@ import IntroIconItem from '../items/introIconItem'
 import getUserLanguage from '../../utils/language'
 
 function Introduction() {
-    const introSectionStyling = 'flex justify-center lg:flex-row px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 bg-white'
+    const introSectionStyling = 'flex justify-center lg:flex-row mt-10 px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 bg-white'
     const introInnerWrapperStyling = 'flex flex-col w-full xl:max-w-[64rem] py-10 gap-8'
     const downloadButtonStyling = 'cursor-pointer font-bold text-center px-4 py-2 rounded-lg ring-black ring-1 inset-ring-black inset-ring-3 duration-400 ease-out hover:border-red hover:ring-red hover:inset-ring-red hover:text-red'
 
