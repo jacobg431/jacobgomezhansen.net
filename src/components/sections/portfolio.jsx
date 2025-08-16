@@ -10,7 +10,7 @@ function Portfolio() {
         <>
             <section id="portfolio" className={portfolioSectionStyling}>
                 <div className={portfolioInnerWrapperStyling}>
-                    <h2 className="text-3xl py-6">Portfolio</h2>
+                    <h2 className="font-bold text-3xl py-6">Projects</h2>
                     <div className={portfolioItemsContainerStyling}>
                         <PortfolioItem
                             title="Automated Maintenance Scheduling"
