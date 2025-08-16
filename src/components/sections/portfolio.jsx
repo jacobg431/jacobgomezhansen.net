@@ -14,27 +14,27 @@ function Portfolio() {
                     <div className={portfolioItemsContainerStyling}>
                         <PortfolioItem
                             title="Automated Maintenance Scheduling"
-                            imageUrl="bg-[url(/src/assets/Optiplan.webp)]"
+                            imageUrl="/src/assets/Optiplan-128-Px.webp"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                         <PortfolioItem
                             title="Create a CV"
-                            imageUrl="bg-[url(/src/assets/Create-a-CV.webp)]"
+                            imageUrl="/src/assets/Create-a-CV-128-Px.webp"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                         <PortfolioItem
                             title="Make GPT Laugh"
-                            imageUrl="bg-[url(/src/assets/Make-GPT-Laugh.webp)]"
+                            imageUrl="/src/assets/Make-GPT-Laugh-128-Px.webp"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                         <PortfolioItem
                             title="Ballads of the Wild"
-                            imageUrl="bg-[url(/src/assets/Ballads-of-the-wild.webp)]"
+                            imageUrl="/src/assets/Ballads-of-the-wild-128-Px.webp"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                         <PortfolioItem
                             title="Bards of the Wild"
-                            imageUrl="bg-[url(/src/assets/Bards-of-the-Wild.webp)]"
+                            imageUrl="/src/assets/Bards-of-the-Wild-128-Px.webp"
                             description="Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
                         />
                     </div>
