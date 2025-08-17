@@ -9,7 +9,7 @@ function Expertise() {
     return (
         <>
             <section id="expertise" className={expertiseSectionStyling}>
-                <div className={expertiseInnerWrapperStyling}>'
+                <div className={expertiseInnerWrapperStyling}>
                     <h2 className="text-3xl py-6">Expertise</h2>
                     <div className={expertiseItemsContainerStyling}>
                         <ExpertiseItem title="Full-Stack Programming" />

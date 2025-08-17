@@ -7,6 +7,7 @@ import { useDeviceDetection } from '../../hooks/useDeviceDetection'
 function PortfolioItem(props) {
     const portfolioItemStyling = 'border border-black border-4 max-w-96 p-10 bg-white rounded-xl duration-400 ease-out hover:border-red hover:shadow-2xl'
     const portfolioImageStyling = 'h-32 min-w-60 rounded-xl'
+    const readMoreSpanStyling = 'max-w-28 flex items-center gap-2 group hover:cursor-pointer'
 
     const [isHovering, setHovering] = useState(false)
     const iconDynamicStyling = { color: isHovering ? "#ff6167" : "#292524" }
@@ -29,8 +30,8 @@ function PortfolioItem(props) {
                 <img className={portfolioImageStyling} src={props.imageUrl} alt={props.alt}></img>
                 <h3 className="text-xl font-bold mt-8 -mb-2">{props.title}</h3>
                 <p className="py-6">{props.description}</p>
-                <span className="max-w-28 flex items-center gap-2 group hover:cursor-pointer" onMouseEnter={onSpanMouseEnter} onMouseLeave={onSpanMouseLeave}>
-                    <a className="duration-400 ease-out group-hover:text-red" href="#">Read more</a>
+                <span className={readMoreSpanStyling} onMouseEnter={onSpanMouseEnter} onMouseLeave={onSpanMouseLeave}>
+                    <a className="duration-400 ease-out group-hover:text-red" href={props.url} target="_blank">Read more</a>
                     <FontAwesomeIcon icon={faExternalLink} className="duration-400 ease-out" style={iconDynamicStyling} />
                 </span>
             </div>
