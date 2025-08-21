@@ -54,9 +54,7 @@ function PortfolioItem(props) {
                 <p className={descriptionStyling}>{description}</p>
                 <div className={labelsContainerStyling} style={labelsContainerDynamicStyling}>
                     {labelList.map((label) => (
-                        <>
-                            <Label key={label.key} label={label} />
-                        </>
+                        <Label key={label.key} label={label} />
                     ))}
                 </div>
                 <span className={readMoreSpanStyling} onMouseEnter={onSpanMouseEnter} onMouseLeave={onSpanMouseLeave}>
