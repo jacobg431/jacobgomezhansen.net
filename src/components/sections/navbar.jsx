@@ -41,7 +41,8 @@ function Navbar() {
 
     library.add(faBars)
 
-    const navbarSectionStyling = 'flex bg-black text-white font-bold px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 justify-center'
+    const navbarSectionStyling =
+        'flex bg-black text-white font-bold px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 justify-center'
     const navbarInnerWrapperStyling = 'flex w-full xl:max-w-[64rem] py-10 justify-between'
     const navbarContainerStyling = smallScreen ? 'hidden' : 'flex gap-4'
     const navbarMobileContainerStyling = openMenu

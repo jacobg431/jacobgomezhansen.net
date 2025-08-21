@@ -64,8 +64,10 @@ function Header() {
                 onMouseEnter={onHeaderMouseEnter}
                 onMouseLeave={onHeaderMouseLeave}
             >
-                <div className={headerInnerWrapperStyling} 
-                style={{ justifyContent: flipped ? 'center' : 'space-between' }}>
+                <div
+                    className={headerInnerWrapperStyling}
+                    style={{ justifyContent: flipped ? 'center' : 'space-between' }}
+                >
                     <AnimatePresence>
                         {items.map((id) => (
                             <Motion.div

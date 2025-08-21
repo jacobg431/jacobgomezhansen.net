@@ -25,7 +25,7 @@ function IntroIconItem(props) {
             icon={iconTypeMap[props.iconId]}
             className={iconStyling}
             style={iconDynamicStyling}
-            size='3x'
+            size="3x"
             onMouseEnter={onIconMouseEnter}
             onMouseLeave={onIconMouseLeave}
             onClick={onIconClick}
@@ -49,9 +49,7 @@ function IntroIconItem(props) {
 
     return (
         <>
-            <div className={iconContainerStyling}>
-                {icon}
-            </div>
+            <div className={iconContainerStyling}>{icon}</div>
         </>
     )
 }

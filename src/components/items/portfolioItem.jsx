@@ -1,9 +1,9 @@
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLink } from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
 import { useDeviceDetection } from '../../hooks/useDeviceDetection'
-import Label from "../ui/label"
+import Label from '../ui/label'
 
 function PortfolioItem(props) {
     const title = props.item.title
@@ -12,7 +12,8 @@ function PortfolioItem(props) {
     const url = props.item.url
     const imageUrl = props.item.imageUrl
     const labelList = props.item.labelList
-    const portfolioItemStyling = 'border border-black border-4 w-full 2xs:max-w-96 p-8 xs:p-10 bg-white rounded-xl duration-400 ease-out hover:border-red hover:shadow-2xl'
+    const portfolioItemStyling =
+        'border border-black border-4 w-full 2xs:max-w-96 p-8 xs:p-10 bg-white rounded-xl duration-400 ease-out hover:border-red hover:shadow-2xl'
     const imageStyling = 'w-full rounded-xl'
     const titleStyling = 'text-md 2xs:text-xl font-bold mt-6 xs:mt-8 -mb-4'
     const descriptionStyling = 'py-6 text-sm'
@@ -22,10 +23,10 @@ function PortfolioItem(props) {
     const readmoreLinkIconStyling = 'duration-400 ease-out'
 
     const anyLabelPresent = isAnyLabelPresent()
-    const labelsContainerDynamicStyling = {"display": anyLabelPresent ? "flex" : "hidden"}
+    const labelsContainerDynamicStyling = { display: anyLabelPresent ? 'flex' : 'hidden' }
 
     const [isHovering, setHovering] = useState(false)
-    const iconDynamicStyling = { color: isHovering ? "#ff6167" : "#292524" }
+    const iconDynamicStyling = { color: isHovering ? '#ff6167' : '#292524' }
     const device = useDeviceDetection()
 
     library.add(faExternalLink)
@@ -58,8 +59,14 @@ function PortfolioItem(props) {
                     ))}
                 </div>
                 <span className={readMoreSpanStyling} onMouseEnter={onSpanMouseEnter} onMouseLeave={onSpanMouseLeave}>
-                    <a className={readmoreLinkStyling} href={url} target="_blank">Read more</a>
-                    <FontAwesomeIcon icon={faExternalLink} className={readmoreLinkIconStyling} style={iconDynamicStyling} />
+                    <a className={readmoreLinkStyling} href={url} target="_blank">
+                        Read more
+                    </a>
+                    <FontAwesomeIcon
+                        icon={faExternalLink}
+                        className={readmoreLinkIconStyling}
+                        style={iconDynamicStyling}
+                    />
                 </span>
             </div>
         </>

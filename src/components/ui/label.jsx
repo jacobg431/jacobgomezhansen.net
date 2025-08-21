@@ -4,8 +4,8 @@ function Label(props) {
     const labelStyling = 'flex text-nowrap text-sm gap-2 items-center border border-3 border-black rounded-xl px-2'
     const labelDotStyling = 'h-2 w-2 rounded-full bg-black'
 
-    const dotDynamicStyling = {"backgroundColor": labelColor}
-    return(
+    const dotDynamicStyling = { backgroundColor: labelColor }
+    return (
         <>
             <span className={labelStyling}>
                 <div className={labelDotStyling} style={dotDynamicStyling}></div>
