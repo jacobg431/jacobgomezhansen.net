@@ -9,17 +9,17 @@
             "labelList": [
                 {
                     "key": 0,
-                    "color": "#000000",
+                    "color": "#292524",
                     "text": "C# / .NET"
                 },
                 {
                     "key": 1,
-                    "color": "#000000",
+                    "color": "#ff6167",
                     "text": "React"
                 },
                 {
                     "key": 2,
-                    "color": "#000000",
+                    "color": "#35bd79",
                     "text": "SQLite"
                 }
             ]
@@ -33,22 +33,22 @@
             "labelList": [
                 {
                     "key": 0,
-                    "color": "#000000",
+                    "color": "#292524",
                     "text": "Java"
                 },
                 {
                     "key": 1,
-                    "color": "#000000",
+                    "color": "#ff6167",
                     "text": "Spring Boot"
                 },
                 {
                     "key": 2,
-                    "color": "#000000",
+                    "color": "#35bd79",
                     "text": "React"
                 },
                 {
                     "key": 3,
-                    "color": "#000000",
+                    "color": "#d6d3d1",
                     "text": "Docker"
                 }
             ]
@@ -62,12 +62,12 @@
             "labelList": [
                 {
                     "key": 0,
-                    "color": "#000000",
+                    "color": "#292524",
                     "text": "Godot"
                 },
                 {
                     "key": 1,
-                    "color": "#000000",
+                    "color": "#ff6167",
                     "text": "OpenAI API"
                 }
             ]
@@ -81,12 +81,12 @@
             "labelList": [
                 {
                     "key": 0,
-                    "color": "#000000",
+                    "color": "#292524",
                     "text": "Audacity"
                 },
                 {
                     "key": 1,
-                    "color": "#000000",
+                    "color": "#ff6167",
                     "text": "Affinity Photo"
                 }
             ]
@@ -100,12 +100,12 @@
             "labelList": [
                 {
                     "key": 0,
-                    "color": "#000000",
+                    "color": "#292524",
                     "text": "Audacity"
                 },
                 {
                     "key": 1,
-                    "color": "#000000",
+                    "color": "#ff6167",
                     "text": "Affinity Photo"
                 }
             ]

@@ -10,7 +10,7 @@ function PortfolioItem(props) {
     const imageStyling = 'w-full rounded-xl'
     const titleStyling = 'text-md 2xs:text-xl font-bold mt-6 xs:mt-8 -mb-4'
     const descriptionStyling = 'py-6 text-sm'
-    const labelsContainerStyling = 'grid grid-cols-[repeat(auto-fit,_minmax(6rem,_1fr))] gap-2'
+    const labelsContainerStyling = 'flex flex-wrap gap-2'
     const readmoreLinkStyling = 'duration-400 ease-out group-hover:text-red'
     const readMoreSpanStyling = 'max-w-28 mt-6 flex items-center gap-2 group hover:cursor-pointer'
     const readmoreLinkIconStyling = 'duration-400 ease-out'
@@ -49,7 +49,7 @@ function PortfolioItem(props) {
                 <div className={labelsContainerStyling} style={labelsContainerDynamicStyling}>
                     {props.labelList.map((label) => (
                         <>
-                            <Label color={label.color} text={label.text} />
+                            <Label label={label} />
                         </>
                     ))}
                 </div>
