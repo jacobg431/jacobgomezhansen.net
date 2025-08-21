@@ -6,6 +6,12 @@ import { useDeviceDetection } from '../../hooks/useDeviceDetection'
 import Label from "../ui/label"
 
 function PortfolioItem(props) {
+    const title = props.item.title
+    const description = props.item.description
+    const alt = props.item.alt
+    const url = props.item.url
+    const imageUrl = props.item.imageUrl
+    const labelList = props.item.labelList
     const portfolioItemStyling = 'border border-black border-4 w-full 2xs:max-w-96 p-8 xs:p-10 bg-white rounded-xl duration-400 ease-out hover:border-red hover:shadow-2xl'
     const imageStyling = 'w-full rounded-xl'
     const titleStyling = 'text-md 2xs:text-xl font-bold mt-6 xs:mt-8 -mb-4'
@@ -34,27 +40,27 @@ function PortfolioItem(props) {
     }
 
     function isAnyLabelPresent() {
-        if (props?.labels == null) return false
-        if (!Array.isArray(props.labelList)) return false
-        if (Object.keys(props.labelList).length < 1) return false
+        if (labelList == null) return false
+        if (!Array.isArray(labelList)) return false
+        if (Object.keys(labelList).length < 1) return false
         return true
     }
 
     return (
         <>
             <div className={portfolioItemStyling}>
-                <img className={imageStyling} src={props.imageUrl} alt={props.alt}></img>
-                <h3 className={titleStyling}>{props.title}</h3>
-                <p className={descriptionStyling}>{props.description}</p>
+                <img className={imageStyling} src={imageUrl} alt={alt}></img>
+                <h3 className={titleStyling}>{title}</h3>
+                <p className={descriptionStyling}>{description}</p>
                 <div className={labelsContainerStyling} style={labelsContainerDynamicStyling}>
-                    {props.labelList.map((label) => (
+                    {labelList.map((label) => (
                         <>
-                            <Label label={label} />
+                            <Label key={label.key} label={label} />
                         </>
                     ))}
                 </div>
                 <span className={readMoreSpanStyling} onMouseEnter={onSpanMouseEnter} onMouseLeave={onSpanMouseLeave}>
-                    <a className={readmoreLinkStyling} href={props.url} target="_blank">Read more</a>
+                    <a className={readmoreLinkStyling} href={url} target="_blank">Read more</a>
                     <FontAwesomeIcon icon={faExternalLink} className={readmoreLinkIconStyling} style={iconDynamicStyling} />
                 </span>
             </div>

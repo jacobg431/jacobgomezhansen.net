@@ -17,11 +17,7 @@ function Portfolio() {
                         {portfolioItemList.map((item) => (
                             <PortfolioItem
                                 key={item.key}
-                                title={item.title}
-                                description={item.description}
-                                url={item.url}
-                                imageUrl={item.imageUrl}
-                                labelList={item.labelList}
+                                item={item}
                             />
                         ))}
                     </div>
