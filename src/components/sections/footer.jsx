@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <>
-            <footer id="contact" className="bg-stone-800 text-gray-50 text-center p-6">
+            <footer id="contact" className="bg-black text-white text-center mt-10 p-6">
                 <p>© 2025 Jacob Gomez Hansen | Something, something clever ...</p>
                 <p>
                     Stay connected:&nbsp;
