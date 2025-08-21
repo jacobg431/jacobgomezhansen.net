@@ -1,6 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons'
-import IntroIconItem from '../items/introIconItem'
+//import IntroIconItem from '../items/introIconItem'
 import IntroButtonItem from '../items/introButtonItem'
 
 function Introduction() {
@@ -22,8 +22,6 @@ function Introduction() {
                         growth opportunities.
                     </p>
                     <div className="flex flex-row w-full items-center gap-4">
-                        <IntroIconItem iconId="linkedin" tooltip="LinkedIn"/>
-                        <IntroIconItem iconId="github" tooltip="GitHub" />
                         <IntroButtonItem id="download" text="Download Resume" />
                         <IntroButtonItem id="message" text="Message Me" />
                     </div>
