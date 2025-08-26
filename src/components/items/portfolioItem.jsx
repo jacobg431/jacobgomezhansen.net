@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { useDeviceDetection } from '../../hooks/useDeviceDetection'
-import Label from '../ui/label'
+import PortfolioItenLabel from '../ui/portfolioItemLabel'
 
 function PortfolioItem(props) {
     const title = props.item.title
@@ -57,7 +57,7 @@ function PortfolioItem(props) {
                 <p className={descriptionStyling}>{description}</p>
                 <div className={labelsContainerStyling} style={labelsContainerDynamicStyling}>
                     {labelList.map((label) => (
-                        <Label key={label.key} label={label} />
+                        <PortfolioItenLabel key={label.key} label={label} />
                     ))}
                 </div>
                 <span className={readMoreSpanStyling} onMouseEnter={onSpanMouseEnter} onMouseLeave={onSpanMouseLeave}>

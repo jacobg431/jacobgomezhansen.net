@@ -1,0 +1,35 @@
+{
+    "itemList": [
+        {
+            "key": 0,
+            "title": "Programming Languages",
+            "labelList": ["Python", "C++", "C#", "C", "Java", "JavaScript", "PHP", "SQL"]
+        },
+        {
+            "key": 1,
+            "title": "Technologies & Frameworks",
+            "labelList": [
+                ".NET",
+                "Spring Boot",
+                "React",
+                "Android Studio",
+                "SQL Server",
+                "MySQL",
+                "Power BI",
+                "Godot",
+                "Pygame"
+            ]
+        },
+        {
+            "key": 2,
+            "title": "Domains",
+            "labelList": [
+                "Full-Stack Programming",
+                "Embedded Programming",
+                "Mobile App Development",
+                "Data Engineering",
+                "Data Warehouse"
+            ]
+        }
+    ]
+}

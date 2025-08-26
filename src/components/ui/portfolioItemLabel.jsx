@@ -1,4 +1,4 @@
-function Label(props) {
+function PortfolioItemLabel(props) {
     const labelColor = props.label.color
     const labelText = props.label.text
     const labelStyling = 'flex text-nowrap text-sm gap-2 items-center border border-3 border-black rounded-xl px-2'
@@ -15,4 +15,4 @@ function Label(props) {
     )
 }
 
-export default Label
+export default PortfolioItemLabel
