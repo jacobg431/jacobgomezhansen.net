@@ -25,13 +25,21 @@ function ExpertiseItem(props) {
         <div className={expertiseItemStyling}>
             <h4 className={expertiseTitleStyling}>{title}</h4>
             <DragDropContext onDragEnd={handleDragEnd}>
-                <Droppable droppableId='labels' direction='horizontal'>
+                <Droppable droppableId="labels" direction="horizontal">
                     {(provided) => (
-                        <div className={expertiseLabelsContainerStyling} ref={provided.innerRef} {...provided.droppableProps}>
+                        <div
+                            className={expertiseLabelsContainerStyling}
+                            ref={provided.innerRef}
+                            {...provided.droppableProps}
+                        >
                             {labels.map((label, index) => (
                                 <Draggable key={label} draggableId={label} index={index}>
                                     {(provided) => (
-                                        <div ref={provided.innerRef} {...provided.dragHandleProps} {...provided.draggableProps}>
+                                        <div
+                                            ref={provided.innerRef}
+                                            {...provided.dragHandleProps}
+                                            {...provided.draggableProps}
+                                        >
                                             <ExpertiseItemLabel title={label} />
                                         </div>
                                     )}
