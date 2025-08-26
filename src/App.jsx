@@ -7,16 +7,18 @@ import Navbar from './components/sections/navbar'
 import Portfolio from './components/sections/portfolio'
 
 function App() {
+    const allImages = import.meta.glob('/src/assets/images/*.webp', { eager: true, import: 'default' })
+
     return (
         <>
             <div className="w-full">
-                <Navbar />
+                <Navbar allImages={allImages} />
 
-                <Header />
+                <Header allImages={allImages} />
 
                 <Introduction />
 
-                <Portfolio />
+                <Portfolio allImages={allImages} />
 
                 <Expertise />
 

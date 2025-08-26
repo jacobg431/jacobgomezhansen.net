@@ -4,9 +4,27 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import NavbarItem from '../items/navbarItem'
 import { setupNavbarClickEvents } from '../../utils/setupEventListeners'
-import personalLogo from '../../assets/Personal-Logo-Trans-Negative-256-Px.webp'
 
-function Navbar() {
+function Navbar(props) {
+    const personalLogo = props.allImages['/src/assets/images/Personal-Logo-Trans-Negative-256-Px.webp']
+
+    const navbarSectionStyling =
+        'flex bg-black text-white font-bold px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 justify-center'
+    const navbarInnerWrapperStyling = 'flex w-full xl:max-w-[64rem] py-10 justify-between'
+
+    const [smallScreen, setSmallScreen] = useState(() => {
+        return isSmallScreen()
+    })
+    const [openMenu, setOpenMenu] = useState(false)
+
+    const navbarContainerStyling = smallScreen ? 'hidden' : 'flex gap-4'
+    const navbarMobileContainerStyling = openMenu
+        ? 'flex w-full h-full z-10 absolute top-0 flex-col items-center justify-center gap-4 text-xl text-white font-bold bg-black transition-[height] duration-400'
+        : 'flex w-full h-0 z-10 absolute -top-32 text-white font-bold bg-black transition-[height] duration-400'
+    const navbarMobileMenuIcon = smallScreen ? (
+        <FontAwesomeIcon icon="bars" size="xl" className="z-20" onClick={handleNavbarMenuClick} />
+    ) : null
+
     function isSmallScreen() {
         return window.innerWidth <= 1024
     }
@@ -26,12 +44,6 @@ function Navbar() {
         return cleanup
     }, [])
 
-    const [smallScreen, setSmallScreen] = useState(() => {
-        return isSmallScreen()
-    })
-
-    const [openMenu, setOpenMenu] = useState(false)
-
     window.onresize = () => {
         setSmallScreen(isSmallScreen())
         if (!isSmallScreen()) {
@@ -40,17 +52,6 @@ function Navbar() {
     }
 
     library.add(faBars)
-
-    const navbarSectionStyling =
-        'flex bg-black text-white font-bold px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 justify-center'
-    const navbarInnerWrapperStyling = 'flex w-full xl:max-w-[64rem] py-10 justify-between'
-    const navbarContainerStyling = smallScreen ? 'hidden' : 'flex gap-4'
-    const navbarMobileContainerStyling = openMenu
-        ? 'flex w-full h-full z-10 absolute top-0 flex-col items-center justify-center gap-4 text-xl text-white font-bold bg-black transition-[height] duration-400'
-        : 'flex w-full h-0 z-10 absolute -top-32 text-white font-bold bg-black transition-[height] duration-400'
-    const navbarMobileMenuIcon = smallScreen ? (
-        <FontAwesomeIcon icon="bars" size="xl" className="z-20" onClick={handleNavbarMenuClick} />
-    ) : null
 
     return (
         <>

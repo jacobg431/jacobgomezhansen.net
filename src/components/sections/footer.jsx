@@ -1,7 +1,9 @@
 function Footer() {
+    const footerSectionStyling = 'bg-black text-white text-center mt-10 p-6'
+
     return (
         <>
-            <footer id="contact" className="bg-black text-white text-center mt-10 p-6">
+            <footer id="contact" className={footerSectionStyling}>
                 <p>© 2025 Jacob Gomez Hansen | Something, something clever ...</p>
                 <p>
                     Stay connected:&nbsp;

@@ -5,7 +5,7 @@
             "title": "Automated Maintenance Scheduling",
             "description": "Web-based prototype to demonstrate the concept of automated maintenance scheduling in industrial environments. Sponsored by Kongsberg Digital.",
             "url": "https://www.hiof.no/iio/om/expo/prosjekter-2025/automatisering/b25itk59/index.html",
-            "imageUrl": "/src/assets/Optiplan-128-Px.webp",
+            "imageUrl": "/src/assets/images/Optiplan-128-Px.webp",
             "labelList": [
                 {
                     "key": 0,
@@ -29,7 +29,7 @@
             "title": "Create a CV",
             "description": "Automatically generate a CV in PDF format based on user form input.",
             "url": "https://cv.begby.net",
-            "imageUrl": "/src/assets/Create-a-CV-128-Px.webp",
+            "imageUrl": "/src/assets/images/Create-a-CV-128-Px.webp",
             "labelList": [
                 {
                     "key": 0,
@@ -58,7 +58,7 @@
             "title": "Make GPT Laugh",
             "description": "Form sentences. Keep ChatGPT amused. Keep on living.",
             "url": "https://globalgamejam.org/games/2024/make-gpt-laugh-5",
-            "imageUrl": "/src/assets/Make-GPT-Laugh-128-Px.webp",
+            "imageUrl": "/src/assets/images/Make-GPT-Laugh-128-Px.webp",
             "labelList": [
                 {
                     "key": 0,
@@ -77,7 +77,7 @@
             "title": "Bards of the Wild",
             "description": "A The Legend of Zelda: Breath of the Wild music modification. Made in collaboration with VGM Lounge and 30+ composers. Original music only.",
             "url": "https://gamebanana.com/mods/451070",
-            "imageUrl": "/src/assets/Bards-of-the-Wild-128-Px.webp",
+            "imageUrl": "/src/assets/images/Bards-of-the-Wild-128-Px.webp",
             "labelList": [
                 {
                     "key": 0,
@@ -96,7 +96,7 @@
             "title": "Ballads of the Wild",
             "description": "A The Legend of Zelda: Breath of the Wild music modification. All tracks are covers, remixes or rearrangements of tracks from The Legend of Zelda franchise.",
             "url": "https://gamebanana.com/mods/425867",
-            "imageUrl": "/src/assets/Ballads-of-the-wild-128-Px.webp",
+            "imageUrl": "/src/assets/images/Ballads-of-the-Wild-128-Px.webp",
             "labelList": [
                 {
                     "key": 0,
