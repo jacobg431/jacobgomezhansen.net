@@ -1,14 +1,21 @@
+import ExpertiseItemLabel from "../ui/expertiseItemLabel"
+
 function ExpertiseItem(props) {
-    const title = props.title
-    const expertiseItemStyling = 'flex justify-center items-center px-8 py-6 font-bold bg-gray rounded-xl'
-    const expertiseItemTextStyling = 'text-center text-sm m-0'
+    const title = props.item.title
+    const labelList = props.item.labelList
+    const expertiseItemStyling = 'border border-black border-4 rounded-xl p-10'
+    const expertiseTitleStyling = 'text-md 2xs:text-xl font-bold mb-6'
+    const expertiseLabelsContainerStyling = 'grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-6'
 
     return (
-        <>
-            <div className={expertiseItemStyling}>
-                <p className={expertiseItemTextStyling}>{title}</p>
+        <div className={expertiseItemStyling}>
+            <h4 className={expertiseTitleStyling}>{title}</h4>
+            <div className={expertiseLabelsContainerStyling}>
+                {labelList.map((label, index) => (
+                    <ExpertiseItemLabel key={index} title={label} />
+                ))}
             </div>
-        </>
+        </div>
     )
 }
 
