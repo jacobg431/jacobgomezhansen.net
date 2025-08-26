@@ -12,6 +12,8 @@ function PortfolioItem(props) {
     const url = props.item.url
     const imageUrl = props.item.imageUrl
     const labelList = props.item.labelList
+    const realImageUrl = props.allImages[imageUrl]
+
     const portfolioItemStyling =
         'border border-black border-4 w-full 2xs:max-w-96 p-8 xs:p-10 bg-white rounded-xl duration-400 ease-out hover:border-red hover:shadow-2xl'
     const imageStyling = 'w-full rounded-xl'
@@ -50,7 +52,7 @@ function PortfolioItem(props) {
     return (
         <>
             <div className={portfolioItemStyling}>
-                <img className={imageStyling} src={imageUrl} alt={alt}></img>
+                <img className={imageStyling} src={realImageUrl} alt={alt}></img>
                 <h3 className={titleStyling}>{title}</h3>
                 <p className={descriptionStyling}>{description}</p>
                 <div className={labelsContainerStyling} style={labelsContainerDynamicStyling}>

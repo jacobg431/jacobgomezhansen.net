@@ -7,9 +7,9 @@ function IntroButtonItem(props) {
         'cursor-pointer font-bold text-sm xs:text-base text-center px-4 py-2 rounded-lg ring-black ring-1 inset-ring-black inset-ring-3 duration-400 ease-out hover:border-red hover:ring-red hover:inset-ring-red hover:text-red'
 
     const resumeLanguageMap = {
-        default: '/src/assets/Resume-Jacob-Gomez-Hansen-English-Version.pdf',
-        danish: '/src/assets/Resume-Jacob-Gomez-Hansen-Dansk-Version.pdf',
-        norwegian: '/src/assets/Resume-Jacob-Gomez-Hansen-Norsk-Versjon.pdf',
+        default: '/src/assets/resume/Resume-Jacob-Gomez-Hansen-English-Version.pdf',
+        danish: '/src/assets/resume/Resume-Jacob-Gomez-Hansen-Dansk-Version.pdf',
+        norwegian: '/src/assets/resume/Resume-Jacob-Gomez-Hansen-Norsk-Versjon.pdf',
     }
     const resumeLanguageUrl = resumeLanguageMap[getUserLanguage()]
 

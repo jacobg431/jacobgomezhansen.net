@@ -4,9 +4,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import NavbarItem from '../items/navbarItem'
 import { setupNavbarClickEvents } from '../../utils/setupEventListeners'
-import personalLogo from '../../assets/Personal-Logo-Trans-Negative-256-Px.webp'
 
-function Navbar() {
+function Navbar(props) {
+    const personalLogo = props.allImages['/src/assets/images/Personal-Logo-Trans-Negative-256-Px.webp']
+    
     function isSmallScreen() {
         return window.innerWidth <= 1024
     }

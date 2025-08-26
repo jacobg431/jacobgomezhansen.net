@@ -2,10 +2,9 @@ import { useMemo, useState } from 'react'
 import { motion as Motion, AnimatePresence } from 'framer-motion'
 import { useTypewriter } from 'react-simple-typewriter'
 import { useDeviceDetection } from '../../hooks/useDeviceDetection'
-import profilePicture from '../../assets/Profile-Picture-256-Px.webp'
 
-function Header() {
-    // Regular constants
+function Header(props) {
+    const profilePicture = props.allImages['/src/assets/images/Profile-Picture-256-Px.webp']
     const headerSectionStyling =
         'flex justify-center px-4 2xs:px-10 sm:px-20 lg:px-40  border-b-4 border-b-red relative hover:bg-black duration-400'
     const headerInnerWrapperStyling = 'flex w-full xl:max-w-[64rem] items-center justify-between py-10 gap-4 2xs:gap-8'
@@ -17,7 +16,6 @@ function Header() {
     const typewriterStyling = 'inline-block w-auto min-h-0 items-center whitespace-normal'
     const typewriterStrings = ['Software Developer', 'Embedded Programmer', 'Computer Engineer']
 
-    // State-related constants
     const [flipped, setFlipped] = useState(false)
     const items = flipped ? ['avatar', 'text'] : ['text', 'avatar']
     const typewriterLength = Math.max(...typewriterStrings.map((s) => s.length))
