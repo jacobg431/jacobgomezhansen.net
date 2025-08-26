@@ -8,6 +8,7 @@ import Portfolio from './components/sections/portfolio'
 
 function App() {
     const allImages = import.meta.glob('/src/assets/images/*.webp', { eager: true, import: 'default' })
+    const allResumes = import.meta.glob('/src/assets/resumes/*.pdf', { eager: true, import: 'default' })
 
     return (
         <>
@@ -16,7 +17,7 @@ function App() {
 
                 <Header allImages={allImages} />
 
-                <Introduction />
+                <Introduction allResumes={allResumes} />
 
                 <Portfolio allImages={allImages} />
 
