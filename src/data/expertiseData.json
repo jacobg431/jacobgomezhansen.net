@@ -3,16 +3,7 @@
         {
             "key": 0,
             "title": "Programming Languages",
-            "labelList": [
-                "Python",
-                "C++",
-                "C#",
-                "C",
-                "Java",
-                "JavaScript",
-                "PHP",
-                "SQL"
-            ]
+            "labelList": ["Python", "C++", "C#", "C", "Java", "JavaScript", "PHP", "SQL"]
         },
         {
             "key": 1,

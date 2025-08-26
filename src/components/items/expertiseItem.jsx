@@ -1,4 +1,4 @@
-import ExpertiseItemLabel from "../ui/expertiseItemLabel"
+import ExpertiseItemLabel from '../ui/expertiseItemLabel'
 
 function ExpertiseItem(props) {
     const title = props.item.title

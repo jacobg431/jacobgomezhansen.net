@@ -6,7 +6,7 @@ function Expertise() {
     const expertiseInnerWrapperStyling = 'flex flex-col gap-6 w-full xl:max-w-[64rem] py-10'
     const expertiseTitleStyling = 'text-3xl font-bold'
     const expertiseItemList = expertiseData.itemList
-    
+
     return (
         <>
             <section id="expertise" className={expertiseSectionStyling}>
