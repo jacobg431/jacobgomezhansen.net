@@ -3,7 +3,8 @@ import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-i
 //import IntroIconItem from '../items/introIconItem'
 import IntroButtonItem from '../items/introButtonItem'
 
-function Introduction() {
+function Introduction(props) {
+    const allResumes = props.allResumes
     const introSectionStyling =
         'flex justify-center lg:flex-row mt-10 px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 bg-white'
     const introInnerWrapperStyling = 'flex flex-col w-full xl:max-w-[64rem] py-10 gap-8'
@@ -23,8 +24,8 @@ function Introduction() {
                         with both horizontal and vertical growth opportunities.
                     </p>
                     <div className="flex flex-row w-full items-center gap-4">
-                        <IntroButtonItem id="download" text="Download Resume" />
-                        <IntroButtonItem id="message" text="Message Me" />
+                        <IntroButtonItem id="download" text="Download Resume" allResumes={allResumes} />
+                        <IntroButtonItem id="message" text="Message Me" allResumes={allResumes} />
                     </div>
                 </div>
             </section>
