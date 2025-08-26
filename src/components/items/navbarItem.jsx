@@ -1,11 +1,14 @@
 function NavbarItem(props) {
+    const href = props.href
+    const title = props.title
+    
     return (
         <>
             <a
                 className="no-underline transition-colors duration-500 hover:text-red hover:animate-pulse"
-                href={props.href}
+                href={href}
             >
-                {props.title}
+                {title}
             </a>
         </>
     )
