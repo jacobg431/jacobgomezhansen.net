@@ -5,7 +5,7 @@ function ExpertiseItem(props) {
     const labelList = props.item.labelList
     const expertiseItemStyling = 'border border-black border-4 rounded-xl p-10'
     const expertiseTitleStyling = 'text-md 2xs:text-xl font-bold mb-6'
-    const expertiseLabelsContainerStyling = 'grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-6'
+    const expertiseLabelsContainerStyling = 'grid grid-cols-[repeat(auto-fit,_minmax(140px,_1fr))] gap-6'
 
     return (
         <div className={expertiseItemStyling}>
