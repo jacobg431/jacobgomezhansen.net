@@ -16,7 +16,7 @@ function Navbar(props) {
         return isSmallScreen()
     })
     const [openMenu, setOpenMenu] = useState(false)
-    
+
     const navbarContainerStyling = smallScreen ? 'hidden' : 'flex gap-4'
     const navbarMobileContainerStyling = openMenu
         ? 'flex w-full h-full z-10 absolute top-0 flex-col items-center justify-center gap-4 text-xl text-white font-bold bg-black transition-[height] duration-400'
