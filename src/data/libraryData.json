@@ -1,0 +1,19 @@
+{
+    "itemList": [
+        {
+            "key": 0,
+            "title": "C# and .NET",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+            "key": 1,
+            "title": "The Data Warehouse Toolkit",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+            "key": 2,
+            "title": "Full Stack Development with Spring Boot 3 and React",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+    ]
+}
