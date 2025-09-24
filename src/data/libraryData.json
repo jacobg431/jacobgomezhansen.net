@@ -2,18 +2,113 @@
     "itemList": [
         {
             "key": 0,
-            "title": "C# and .NET",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+            "title": "C# 12 and .NET 8",
+            "subtitle": "Modern Cross-Platform Development Fundamentals",
+            "author": "Mark J. Price",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "C# 12 and .NET 8, Eighth Edition book cover.",
+            "imageUrl": "/src/assets/images/library/C-Sharp-And-Dot-NET-160-Px.webp",
+            "url": "https://www.packtpub.com/en-us/product/c-12-and-net-8-modern-cross-platform-development-fundamentals-9781837635870"
         },
         {
             "key": 1,
-            "title": "The Data Warehouse Toolkit",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+            "title": "Full Stack Development with Spring Boot 3 and React",
+            "subtitle": "",
+            "author": "Juha Hinkula",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "Full Stack Development with Spring Boot 3 and React, Fourth Edition book cover.",
+            "imageUrl": "/src/assets/images/library/Spring-Boot-3-And-React-160-Px.webp",
+            "url": "https://www.packtpub.com/en-us/product/full-stack-development-with-spring-boot-3-and-react-9781805126812"
         },
         {
             "key": 2,
-            "title": "Full Stack Development with Spring Boot 3 and React",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+            "title": "The Data Warehouse Toolkit",
+            "subtitle": "The Definitive Guide to Dimensional Modeling",
+            "author": "Ralph Kimball, Margy Ross",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "The Data Warehouse Toolkit, Third Edition book cover.",
+            "imageUrl": "/src/assets/images/library/Data-Warehouse-Toolkit-160-Px.webp",
+            "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/"
+        },
+        {
+            "key": 3,
+            "title": "Computer Networking",
+            "subtitle": "A Top-Down Approach",
+            "author": "James F. Kurose, Keith W. Ross",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "Computer Networking, Eighth Edition book cover.",
+            "imageUrl": "/src/assets/images/library/Computer-Networking-160-Px.webp",
+            "url": "https://www.pearson.com/en-us/subject-catalog/p/computer-networking/P200000003334/9780135928615"
+        },
+        {
+            "key": 4,
+            "title": "Database Administration",
+            "subtitle": "The Complete Guide to DBA Practices and Procedures",
+            "author": "Craig S. Mullins",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "Database Administration, Second Edition book cover.",
+            "imageUrl": "/src/assets/images/library/Database-Admin-160-Px.webp",
+            "url": "https://www.oreilly.com/library/view/database-administration-the/9780133012743/"
+        },
+        {
+            "key": 5,
+            "title": "Databasesystemer",
+            "subtitle": "",
+            "author": "Bjørn Kristoffersen",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "Databasesystemer, Fifth Edition book cover.",
+            "imageUrl": "/src/assets/images/library/Databasesystemer-160-Px.webp",
+            "url": "https://www.universitetsforlaget.no/databasesystemer-4"
+        },
+        {
+            "key": 6,
+            "title": "SQL Server 2019 Administrator's Guide",
+            "subtitle": "",
+            "author": "Marek Chmel, Vladimir Muzny",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "SQL Server 2019 Administrator's Guide, Second Edition book cover.",
+            "imageUrl": "/src/assets/images/library/SQL-Server-Admin-Guide-160-Px.webp",
+            "url": "https://www.packtpub.com/en-no/product/sql-server-2019-administrators-guide-9781789954326"
+        },
+        {
+            "key": 7,
+            "title": "Datasikkerhet",
+            "subtitle": "Ikke bli svindlernes neste offer",
+            "author": "Tom Heine Nätt, Christian F. Heide",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "Datasikkerhet, Second Edition book cover.",
+            "imageUrl": "/src/assets/images/library/Datasikkerhet-160-Px.webp",
+            "url": "https://www.gyldendal.no/faglitteratur/ingenioerfag/data/datasikkerhet/p-10026601"
+        },
+        {
+            "key": 8,
+            "title": "Python Crash Course",
+            "subtitle": "",
+            "author": "Eric Matthes",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "Python Crash Course, 2nd Edition book cover.",
+            "imageUrl": "/src/assets/images/library/Python-Crash-Course-160-Px.webp",
+            "url": "https://www.amazon.com/Python-Crash-Course-2nd-Edition/dp/1593279280"
+        },
+        {
+            "key": 9,
+            "title": "Digital Fundamentals",
+            "subtitle": "",
+            "author": "Thomas L. Floyd",
+            "description": "This book inspired me to build redstone circuits in Minecraft.",
+            "alt": "Digital Fundamentals, Eleventh Edition book cover.",
+            "imageUrl": "/src/assets/images/library/Digital-Fundamentals-160-Px.webp",
+            "url": "https://www.pearson.com/en-us/subject-catalog/p/digital-fundamentals/P200000001044/9780137506309"
+        },
+        {
+            "key": 10,
+            "title": "Electronics Fundamentals",
+            "subtitle": "Circuits, Devices and Applications",
+            "author": "Thomas L. Floyd, David L. Buchla",
+            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "alt": "Electronics Fundamentals, Eighth Edition book cover",
+            "imageUrl": "/src/assets/images/library/Electronics-Fundamentals-160-Px.webp",
+            "url": "https://www.pearson.de/electronics-fundamentals-pearson-new-international-edition-pdf-ebook-9781292038117"
         }
     ]
 }

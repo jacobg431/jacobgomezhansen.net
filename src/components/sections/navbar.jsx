@@ -6,7 +6,7 @@ import NavbarItem from '../items/navbarItem'
 import { setupNavbarClickEvents } from '../../utils/setupEventListeners'
 
 function Navbar(props) {
-    const personalLogo = props.allImages['/src/assets/images/Personal-Logo-Trans-Negative-256-Px.webp']
+    const personalLogo = props.images['/src/assets/images/misc/Personal-Logo-Trans-Negative-256-Px.webp']
 
     const navbarSectionStyling =
         'flex bg-black text-white font-bold px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 justify-center'

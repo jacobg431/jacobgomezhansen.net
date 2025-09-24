@@ -8,7 +8,7 @@ function PortfolioItem(props) {
     const url = props.item.url
     const imageUrl = props.item.imageUrl
     const labelList = props.item.labelList
-    const realImageUrl = props.allImages[imageUrl]
+    const realImageUrl = props.images[imageUrl]
 
     const portfolioItemStyling =
         'border border-black border-4 w-full 2xs:max-w-96 p-8 xs:p-10 bg-white rounded-xl duration-400 ease-out hover:border-red hover:shadow-2xl'

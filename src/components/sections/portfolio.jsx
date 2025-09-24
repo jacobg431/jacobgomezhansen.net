@@ -2,7 +2,7 @@ import PortfolioItem from '../items/portfolioItem'
 import portfolioData from '../../data/portfolioData.json'
 
 function Portfolio(props) {
-    const allImages = props.allImages
+    const images = props.images
     const portfolioSectionStyling = 'flex justify-center px-4 2xs:px-10 sm:px-20 lg:px-40 bg-white'
     const portfolioInnerWrapperStyling = 'w-full xl:max-w-[64rem] py-10'
     const portfolioTitleStyling = 'font-bold text-3xl mb-6'
@@ -16,7 +16,7 @@ function Portfolio(props) {
                     <h2 className={portfolioTitleStyling}>Projects</h2>
                     <div className={portfolioItemsContainerStyling}>
                         {portfolioItemList.map((item) => (
-                            <PortfolioItem key={item.key} item={item} allImages={allImages} />
+                            <PortfolioItem key={item.key} item={item} images={images} />
                         ))}
                     </div>
                 </div>

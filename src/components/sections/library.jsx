@@ -1,7 +1,8 @@
 import LibraryItem from '../items/libraryItem'
 import libraryData from '../../data/libraryData.json'
 
-function Library() {
+function Library(props) {
+    const images = props.images
     const librarySectionStyling = 'flex justify-center px-4 2xs:px-10 sm:px-20 lg:px-40 bg-white'
     const libraryInnerWrapperStyling = 'w-full xl:max-w-[64rem] py-10'
     const libraryTitleStyling = 'text-3xl font-bold mb-6'
@@ -16,7 +17,7 @@ function Library() {
                     <h2 className={libraryTitleStyling}>Library</h2>
                     <div className={libraryItemsContainerStyling}>
                         {libraryItemList.map((item) => (
-                            <LibraryItem key={item.key} item={item} />
+                            <LibraryItem key={item.key} item={item} images={images} />
                         ))}
                     </div>
                 </div>

@@ -4,7 +4,7 @@ import { useTypewriter } from 'react-simple-typewriter'
 import { useDeviceDetection } from '../../hooks/useDeviceDetection'
 
 function Header(props) {
-    const profilePicture = props.allImages['/src/assets/images/Profile-Picture-256-Px.webp']
+    const profilePicture = props.images['/src/assets/images/misc/Profile-Picture-256-Px.webp']
     const headerSectionStyling =
         'flex justify-center px-4 2xs:px-10 sm:px-20 lg:px-40  border-b-4 border-b-red relative hover:bg-black duration-400'
     const headerInnerWrapperStyling = 'flex w-full xl:max-w-[64rem] items-center justify-between py-10 gap-4 2xs:gap-8'
