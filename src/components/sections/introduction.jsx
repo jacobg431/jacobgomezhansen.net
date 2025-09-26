@@ -1,7 +1,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSquareLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons'
-//import IntroIconItem from '../items/introIconItem'
-import IntroButtonItem from '../items/introButtonItem'
+import Button from '../ui/button'
+import getUserLanguage from '../../utils/language'
 
 function Introduction(props) {
     const resumes = props.resumes
@@ -9,7 +9,22 @@ function Introduction(props) {
         'flex justify-center lg:flex-row mt-10 px-4 2xs:px-10 sm:px-20 lg:px-40 xl:px-0 bg-white'
     const introInnerWrapperStyling = 'flex flex-col w-full xl:max-w-[64rem] py-10 gap-8'
 
+    const resumeLanguageMap = {
+        default: resumes['/src/assets/resumes/Resume-Jacob-Gomez-Hansen-English-Version.pdf'],
+        danish: resumes['/src/assets/resumes/Resume-Jacob-Gomez-Hansen-Dansk-Version.pdf'],
+        norwegian: resumes['/src/assets/resumes/Resume-Jacob-Gomez-Hansen-Norsk-Versjon.pdf'],
+    }
+    const resumeLanguageUrl = resumeLanguageMap[getUserLanguage()]
+
     library.add(faSquareLinkedin, faSquareGithub)
+
+    function onDownloadButtonClick() {
+        window.open(resumeLanguageUrl)
+    }
+
+    function onMessageButtonClick() {
+        return
+    }
 
     return (
         <>
@@ -24,8 +39,8 @@ function Introduction(props) {
                         with both horizontal and vertical growth opportunities.
                     </p>
                     <div className="flex flex-row w-full items-center gap-4">
-                        <IntroButtonItem id="download" text="Download Resume" resumes={resumes} />
-                        <IntroButtonItem id="message" text="Message Me" resumes={resumes} />
+                        <Button text="Download Resume" onClick={onDownloadButtonClick} />
+                        <Button text="Message Me" onClick={onMessageButtonClick} />
                     </div>
                 </div>
             </section>
