@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import LibraryItem from '../items/libraryItem'
 import libraryData from '../../data/libraryData.json'
+import Button from '../ui/button'
 
 function Library(props) {
     const images = props.images
@@ -8,7 +10,20 @@ function Library(props) {
     const libraryTitleStyling = 'text-3xl font-bold mb-6'
     const libraryItemsContainerStyling =
         'grid grid-cols-[repeat(auto-fit,_minmax(16rem,_1fr))] xs:grid-cols-[repeat(auto-fit,_minmax(24rem,_1fr))] gap-6'
-    const libraryItemList = libraryData.itemList
+    const buttonWrapperStyling = 'mt-6 flex'
+
+    const [isShowingAllItems, setShowItems] = useState(false)
+    const buttonText = isShowingAllItems ? "Show Less" : "Show All"
+
+    const libraryItemList = libraryData.itemList.sort((a, b) => a.key - b.key) // Make sure list is sorted in asc order
+    const libraryItemMap = libraryItemList.map((item) => (<LibraryItem key={item.key} item={item} images={images} />))
+
+    const libraryItemListLimited = libraryItemList.slice(0, 2)
+    const libraryItemMapLimited = libraryItemListLimited.map((item) => (<LibraryItem key={item.key} item={item} images={images} />))
+
+    function onLibraryButtonClick() {
+        setShowItems(!isShowingAllItems)
+    }
 
     return (
         <>
@@ -16,9 +31,10 @@ function Library(props) {
                 <div className={libraryInnerWrapperStyling}>
                     <h2 className={libraryTitleStyling}>Library</h2>
                     <div className={libraryItemsContainerStyling}>
-                        {libraryItemList.map((item) => (
-                            <LibraryItem key={item.key} item={item} images={images} />
-                        ))}
+                        {isShowingAllItems ? libraryItemMap : libraryItemMapLimited}
+                    </div>
+                    <div className={buttonWrapperStyling}>
+                        <Button text={buttonText} onClick={onLibraryButtonClick} />
                     </div>
                 </div>
             </section>
