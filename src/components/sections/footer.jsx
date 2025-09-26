@@ -1,5 +1,5 @@
 function Footer() {
-    const footerSectionStyling = 'bg-black text-white text-center mt-10 p-6'
+    const footerSectionStyling = 'bg-black text-white text-center p-6'
 
     return (
         <>

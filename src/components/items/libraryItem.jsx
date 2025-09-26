@@ -9,7 +9,6 @@ function LibraryItem(props) {
     const realImageUrl = props.images[imageUrl]
     const libraryItemStyling =
         'border border-black border-4 flex flex-col xs:flex-row p-6 gap-6 text-center xs:text-left items-center rounded-xl'
-    //const libraryItemImageStyling = 'min-w-20 h-24 bg-black'
     const imageStyling = 'w-20'
     const libraryItemTitleStyling = 'text-xl font-bold py-2'
 

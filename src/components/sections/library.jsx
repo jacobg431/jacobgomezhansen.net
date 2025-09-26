@@ -5,12 +5,14 @@ import Button from '../ui/button'
 
 function Library(props) {
     const images = props.images
-    const librarySectionStyling = 'flex justify-center px-4 2xs:px-10 sm:px-20 lg:px-40 bg-white'
-    const libraryInnerWrapperStyling = 'w-full xl:max-w-[64rem] py-10'
-    const libraryTitleStyling = 'text-3xl font-bold mb-6'
+    const librarySectionStyling = 'flex justify-center pb-10 px-4 2xs:px-10 sm:px-20 lg:px-40 bg-white'
+    const libraryInnerWrapperStyling = 'flex flex-col gap-6 w-full xl:max-w-[64rem] py-10'
+    const textWrapperStyling = 'flex flex-col gap-2'
+    const titleStyling = 'text-3xl font-bold'
+    const paragraphStyling = 'text-sm sm:text-base'
     const libraryItemsContainerStyling =
         'grid grid-cols-[repeat(auto-fit,_minmax(16rem,_1fr))] xs:grid-cols-[repeat(auto-fit,_minmax(24rem,_1fr))] gap-6'
-    const buttonWrapperStyling = 'mt-6 flex'
+    const buttonWrapperStyling = 'flex'
 
     const [isShowingAllItems, setShowItems] = useState(false)
     const buttonText = isShowingAllItems ? "Show Less" : "Show All"
@@ -29,8 +31,13 @@ function Library(props) {
         <>
             <section id="library" className={librarySectionStyling}>
                 <div className={libraryInnerWrapperStyling}>
-                    <h2 className={libraryTitleStyling}>Library</h2>
-                    <div className={libraryItemsContainerStyling}>
+                    <div className={textWrapperStyling}>
+                        <h2 className={titleStyling}>Library</h2>
+                        <p className={paragraphStyling}>
+                            Several books have expanded my knowledge about software development. They have helped me through my studies, 
+                            during my internship, or while working on projects in my free time. Here are my thoughts about some of them.
+                        </p>
+                    </div><div className={libraryItemsContainerStyling}>
                         {isShowingAllItems ? libraryItemMap : libraryItemMapLimited}
                     </div>
                     <div className={buttonWrapperStyling}>
