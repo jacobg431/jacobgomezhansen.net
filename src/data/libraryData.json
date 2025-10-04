@@ -5,110 +5,187 @@
             "title": "C# 12 and .NET 8",
             "subtitle": "Modern Cross-Platform Development Fundamentals",
             "author": "Mark J. Price",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "A thorough introduction to the .NET environment and how to utilize it to develop backend applications and support full-stack development projects.",
             "alt": "C# 12 and .NET 8, Eighth Edition book cover.",
             "imageUrl": "/src/assets/images/library/C-Sharp-And-Dot-NET-160-Px.webp",
-            "url": "https://www.packtpub.com/en-us/product/c-12-and-net-8-modern-cross-platform-development-fundamentals-9781837635870"
+            "url": "https://www.packtpub.com/en-us/product/c-12-and-net-8-modern-cross-platform-development-fundamentals-9781837635870",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Østfold University College"
+                }
+            ]
         },
         {
             "key": 1,
             "title": "Full Stack Development with Spring Boot 3 and React",
             "subtitle": "",
             "author": "Juha Hinkula",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "Teaches the reader how to develop scalable and secure full-stack web applications through two modern and popular frameworks.",
             "alt": "Full Stack Development with Spring Boot 3 and React, Fourth Edition book cover.",
             "imageUrl": "/src/assets/images/library/Spring-Boot-3-And-React-160-Px.webp",
-            "url": "https://www.packtpub.com/en-us/product/full-stack-development-with-spring-boot-3-and-react-9781805126812"
+            "url": "https://www.packtpub.com/en-us/product/full-stack-development-with-spring-boot-3-and-react-9781805126812",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Personal project"
+                }
+            ]
         },
         {
             "key": 2,
             "title": "The Data Warehouse Toolkit",
             "subtitle": "The Definitive Guide to Dimensional Modeling",
             "author": "Ralph Kimball, Margy Ross",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "An investigation into what a data warehouse is, how it can be utilized in impactful ways, and how to systematically develop one. Came in handy during my Fresenius Kabi internship.",
             "alt": "The Data Warehouse Toolkit, Third Edition book cover.",
             "imageUrl": "/src/assets/images/library/Data-Warehouse-Toolkit-160-Px.webp",
-            "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/"
+            "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Fresenius Kabi"
+                }
+            ]
         },
         {
             "key": 3,
             "title": "Computer Networking",
             "subtitle": "A Top-Down Approach",
             "author": "James F. Kurose, Keith W. Ross",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "A thorough description each layer in the TCP/IP network stack.",
             "alt": "Computer Networking, Eighth Edition book cover.",
             "imageUrl": "/src/assets/images/library/Computer-Networking-160-Px.webp",
-            "url": "https://www.pearson.com/en-us/subject-catalog/p/computer-networking/P200000003334/9780135928615"
+            "url": "https://www.pearson.com/en-us/subject-catalog/p/computer-networking/P200000003334/9780135928615",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Østfold University College"
+                }
+            ]
         },
         {
             "key": 4,
             "title": "Database Administration",
             "subtitle": "The Complete Guide to DBA Practices and Procedures",
             "author": "Craig S. Mullins",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "A thorough explanation of the responsibilities and practices of a DBA, as well as the importance of a business to view its data as an asset.",
             "alt": "Database Administration, Second Edition book cover.",
             "imageUrl": "/src/assets/images/library/Database-Admin-160-Px.webp",
-            "url": "https://www.oreilly.com/library/view/database-administration-the/9780133012743/"
+            "url": "https://www.oreilly.com/library/view/database-administration-the/9780133012743/",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Fresenius Kabi"
+                }
+            ]
         },
         {
             "key": 5,
             "title": "Databasesystemer",
             "subtitle": "",
             "author": "Bjørn Kristoffersen",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "Translating to \"Database Systems\" in English, this book introduces the reader to SQL, databases, and DBMS fundamentals through the lense of MySQL.",
             "alt": "Databasesystemer, Fifth Edition book cover.",
             "imageUrl": "/src/assets/images/library/Databasesystemer-160-Px.webp",
-            "url": "https://www.universitetsforlaget.no/databasesystemer-4"
+            "url": "https://www.universitetsforlaget.no/databasesystemer-4",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Østfold University College"
+                }
+            ]
         },
         {
             "key": 6,
             "title": "SQL Server 2019 Administrator's Guide",
             "subtitle": "",
             "author": "Marek Chmel, Vladimir Muzny",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "This book serves as a check-list or recipe on how to configure and administer SQL Server 2019 in accordance to the duties of a DBA.",
             "alt": "SQL Server 2019 Administrator's Guide, Second Edition book cover.",
             "imageUrl": "/src/assets/images/library/SQL-Server-Admin-Guide-160-Px.webp",
-            "url": "https://www.packtpub.com/en-no/product/sql-server-2019-administrators-guide-9781789954326"
+            "url": "https://www.packtpub.com/en-no/product/sql-server-2019-administrators-guide-9781789954326",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Fresenius Kabi"
+                }
+            ]
         },
         {
             "key": 7,
             "title": "Datasikkerhet",
             "subtitle": "Ikke bli svindlernes neste offer",
             "author": "Tom Heine Nätt, Christian F. Heide",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "Translates to \"Computer Security\" in English. This book explains various methods and attacks applied by hackers and scammers, as well as steps individuals and organizations can take to protect themselves online against these threats.",
             "alt": "Datasikkerhet, Second Edition book cover.",
             "imageUrl": "/src/assets/images/library/Datasikkerhet-160-Px.webp",
-            "url": "https://www.gyldendal.no/faglitteratur/ingenioerfag/data/datasikkerhet/p-10026601"
+            "url": "https://www.gyldendal.no/faglitteratur/ingenioerfag/data/datasikkerhet/p-10026601",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Østfold University College"
+                }
+            ]
         },
         {
             "key": 8,
             "title": "Python Crash Course",
             "subtitle": "",
             "author": "Eric Matthes",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "Takes the reader from beginner to intermediate pythoneer level by providing hands-on experience with three different programming projects. I especially learned a lot about refactoring, code design, and working with widely used Python libraries and frameworks.",
             "alt": "Python Crash Course, 2nd Edition book cover.",
             "imageUrl": "/src/assets/images/library/Python-Crash-Course-160-Px.webp",
-            "url": "https://www.amazon.com/Python-Crash-Course-2nd-Edition/dp/1593279280"
+            "url": "https://www.amazon.com/Python-Crash-Course-2nd-Edition/dp/1593279280",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Østfold University College"
+                }
+            ]
         },
         {
             "key": 9,
             "title": "Digital Fundamentals",
             "subtitle": "",
             "author": "Thomas L. Floyd",
-            "description": "This book inspired me to build redstone circuits in Minecraft.",
+            "description": "Beginning with the foundational concepts of logic gates, the book builds continues by exploring the workings of combinational logic circuits and memory cells. From there, the analysis progresses to higher levels of abstraction, examining data storage devices and central processing units (CPUs). Finally, the author offers a broad overview of how an entire computer system functions from a hardware perspective.",
             "alt": "Digital Fundamentals, Eleventh Edition book cover.",
             "imageUrl": "/src/assets/images/library/Digital-Fundamentals-160-Px.webp",
-            "url": "https://www.pearson.com/en-us/subject-catalog/p/digital-fundamentals/P200000001044/9780137506309"
+            "url": "https://www.pearson.com/en-us/subject-catalog/p/digital-fundamentals/P200000001044/9780137506309",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Østfold University College"
+                }
+            ]
         },
         {
             "key": 10,
             "title": "Electronics Fundamentals",
             "subtitle": "Circuits, Devices and Applications",
             "author": "Thomas L. Floyd, David L. Buchla",
-            "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            "description": "This 1000+ pages long book lays the physics and chemistry foundation for the concepts discussed in Digital Fundamentals. This includes investigating fundamental electronic components (e.g. capacitors, transistors, operational amplifiers) and how these can used to create increasingly more complex circuit systems.",
             "alt": "Electronics Fundamentals, Eighth Edition book cover",
             "imageUrl": "/src/assets/images/library/Electronics-Fundamentals-160-Px.webp",
-            "url": "https://www.pearson.de/electronics-fundamentals-pearson-new-international-edition-pdf-ebook-9781292038117"
+            "url": "https://www.pearson.de/electronics-fundamentals-pearson-new-international-edition-pdf-ebook-9781292038117",
+            "labelList": [
+                {
+                    "key": 0,
+                    "color": "#292524",
+                    "text": "Østfold University College"
+                }
+            ]
         }
     ]
 }

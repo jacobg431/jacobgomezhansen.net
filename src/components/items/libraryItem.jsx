@@ -9,6 +9,7 @@ function LibraryItem(props) {
     const realImageUrl = props.images[imageUrl]
     const libraryItemStyling =
         'border border-black border-4 flex flex-col xs:flex-row p-6 gap-6 text-center xs:text-left items-center rounded-xl'
+    const libraryItemDescriptionStyling = 'text-sm'
     const imageStyling = 'w-20'
     const libraryItemTitleStyling = 'text-xl font-bold py-2'
 
@@ -18,7 +19,7 @@ function LibraryItem(props) {
                 <img src={realImageUrl} alt={alt} className={imageStyling} />
                 <div>
                     <h3 className={libraryItemTitleStyling}>{title}</h3>
-                    <p>{description}</p>
+                    <p className={libraryItemDescriptionStyling}>{description}</p>
                     <ReadMoreExternalLink url={url} />
                 </div>
             </div>
