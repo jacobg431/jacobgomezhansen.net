@@ -20,7 +20,6 @@ function PortfolioItem(props) {
     const anyLabelPresent = isAnyLabelPresent()
     const labelsContainerDynamicStyling = { display: anyLabelPresent ? 'flex' : 'hidden' }
 
-
     function isAnyLabelPresent() {
         if (labelList == null) return false
         if (!Array.isArray(labelList)) return false

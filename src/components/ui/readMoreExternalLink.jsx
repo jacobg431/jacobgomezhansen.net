@@ -4,13 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { useDeviceDetection } from '../../hooks/useDeviceDetection'
 
-
 function ReadMoreExternalLink(props) {
     const url = props.url
     const readmoreLinkStyling = 'duration-400 ease-out group-hover:text-red'
     const readMoreSpanStyling = 'max-w-28 mt-6 flex items-center gap-2 group hover:cursor-pointer'
     const readmoreLinkIconStyling = 'duration-400 ease-out'
-    
+
     const [isHovering, setHovering] = useState(false)
     const iconDynamicStyling = { color: isHovering ? '#ff6167' : '#292524' }
     const device = useDeviceDetection()
@@ -32,11 +31,7 @@ function ReadMoreExternalLink(props) {
                 <a className={readmoreLinkStyling} href={url} target="_blank">
                     Read more
                 </a>
-                <FontAwesomeIcon
-                    icon={faExternalLink}
-                    className={readmoreLinkIconStyling}
-                    style={iconDynamicStyling}
-                />
+                <FontAwesomeIcon icon={faExternalLink} className={readmoreLinkIconStyling} style={iconDynamicStyling} />
             </span>
         </>
     )

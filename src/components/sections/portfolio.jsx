@@ -18,8 +18,8 @@ function Portfolio(props) {
                     <div className={textWrapperStyling}>
                         <h2 className={titleStyling}>Projects</h2>
                         <p className={paragraphStyling}>
-                            This is a list of some exciting projects I have worked on. 
-                            Feel free to click on any of the external links to learn more about them.
+                            This is a list of some exciting projects I have worked on. Feel free to click on any of the
+                            external links to learn more about them.
                         </p>
                     </div>
                     <div className={portfolioItemsContainerStyling}>

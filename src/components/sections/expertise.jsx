@@ -16,7 +16,8 @@ function Expertise() {
                     <div className={textWrapperStyling}>
                         <h2 className={titleStyling}>Expertise</h2>
                         <p className={paragraphStyling}>
-                            I know how to create useful and valuable systems, using several technologies from across the tech stack.
+                            I know how to create useful and valuable systems, using several technologies from across the
+                            tech stack.
                         </p>
                     </div>
                     {expertiseItemList.map((item) => (
