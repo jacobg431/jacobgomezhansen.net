@@ -34,4 +34,9 @@ jobs:
             docker pull jacobg431/jacobgomezhansen.net:latest
             docker stop jacobgomezhansen.net || true
             docker rm jacobgomezhansen.net || true
-            docker run -d --name jacobgomezhansen.net -p 443:4173 jacobg431/jacobgomezhansen.net:latest
+            docker run -d \
+                --name jacobgomezhansen.net \
+                -p 443:4173 \
+                -v /etc/letsencrypt/live/jacobgomezhansen.net/fullchain.pem:/certs/fullchain.pem:ro \
+                -v /etc/letsencrypt/live/jacobgomezhansen.net/privkey.pem:/certs/privkey.pem:ro \
+                jacobg431/jacobgomezhansen.net:latest
